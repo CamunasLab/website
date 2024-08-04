@@ -6,6 +6,11 @@ title: Joan Camuñas-Soler
 first_name: Joan
 last_name: Camuñas-Soler
 
+
+# Username (this should match the folder name)
+authors:
+  - admin
+
 # Is this the primary user of the site?
 superuser: true
 
