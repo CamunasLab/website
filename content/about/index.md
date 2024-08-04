@@ -12,7 +12,7 @@ sections:
       image:
         filename: team.jpg  
       text:
-         We are an interdisciplinary research group at the interface of genomics, biophysics, and precision medicine. Our mission is to develop new genomic technologies to map and model cellular dysfunction in human disease. 
+         We are an interdisciplinary research group at the interface of genomics, biophysics, and precision medicine. Our mission is to develop new genomic technologies to map and model cellular dysfunction in human disease.
 
   - block: markdown
     content:

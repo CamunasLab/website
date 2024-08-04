@@ -5,65 +5,66 @@ date: 2022-10-24
 type: landing
 
 sections:
-  - block: contact
+
+  - block: hero
     content:
       title: Contact
-      text: |-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus augue non tempor egestas. Proin nisl nunc, dignissim in accumsan dapibus, auctor ullamcorper neque. Quisque at elit felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget elementum odio. Cras interdum eget risus sit amet aliquet. In volutpat, nisl ut fringilla dignissim, arcu nisl suscipit ante, at accumsan sapien nisl eu eros.
-      email: test@example.org
-      phone: 888 888 88 88
-      address:
-        street: 450 Serra Mall
-        city: Stanford
-        region: CA
-        postcode: '94305'
-        country: United States
-        country_code: US
+      subtitle: ''
+      text:
+      image:
+        filename: collab.jpg
+    view: showcase
+
+
+  - block: contact
+    features:
+      map:
+        provider: 'google'
+        api_key: ''
+        zoom: 15
+    content:
+      title:
       coordinates:
-        latitude: '37.4275'
-        longitude: '-122.1697'
-      directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-      office_hours:
-        - 'Monday 10:00 to 13:00'
-        - 'Wednesday 09:00 to 10:00'
-      appointment_url: 'https://calendly.com'
+        latitude: '57.68611268875995'
+        longitude: '11.95872255330746'
+      text: If you are interested in joining our team, please send us an email. We always welcome application for postdocs, PhD students, research assistants, MsC Students, etc.
+      email: joan.camunas (att) gu.se
+      phone:
+      address:
+        organization:
+        street: Dept. Medical Biochemistry & Cell Biology, Medicinaregatan 9C
+        city: Gothenburg
+        region:
+        postcode: '41390'
+        country: Sweden
+        country_code: SE
+
+      #directions: Enter 9C and go one level up. First glass door on the right as you exit the elevator.
+      #office_hours:
+      contact_links:
+        - icon: twitter
+          icon_pack: fab
+          name: Twitter
+          link: 'https://x.com/JoanCamunas'
+      #appointment_url: 'https://calendly.com'
       #contact_links:
       #  - icon: comments
       #    icon_pack: fas
       #    name: Discuss on Forum
       #    link: 'https://discourse.gohugo.io'
-    
+
       # Automatically link email and phone or display as text?
       autolink: true
-    
+
       # Email form provider
-      form:
-        provider: netlify
-        formspree:
-          id:
-        netlify:
+      #form:
+      #  provider: netlify
+      #  formspree:
+      #    id:
+      #  netlify:
           # Enable CAPTCHA challenge to reduce spam?
-          captcha: false
+      #    captcha: false
     design:
       columns: '1'
 
-  - block: markdown
-    content:
-      title:
-      subtitle: ''
-      text:
-    design:
-      columns: '1'
-      background:
-        image: 
-          filename: contact.jpg
-          filters:
-            brightness: 1
-          parallax: false
-          position: center
-          size: cover
-          text_color_light: true
-      spacing:
-        padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
 ---
