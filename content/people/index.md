@@ -20,4 +20,21 @@ sections:
       show_interests: false
       show_role: true
       show_social: true
+
+  - block: markdown
+    content:
+      title: Alumni
+      subtitle:
+      text: |
+
+          | Name | Position in the lab    | Years | Next Position                 |
+          |--------------------|------------|-------|-------------------------------|
+          | Emma Walsh | Research Assistant | 2023  | PhD student, Cambridge University |
+
+
+
+
+    design:
+      # Choose how many columns the section has. Valid values: '1' or '2'.
+      columns: '1'
 ---
