@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Researchers | Camuñas-Soler Lab</title>
+    <link>http://localhost:1313/author/researchers/</link>
+      <atom:link href="http://localhost:1313/author/researchers/index.xml" rel="self" type="application/rss+xml" />
+    <description>Researchers</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
+    <image>
+      <url>http://localhost:1313/media/icon_hu11126756997858179706.png</url>
+      <title>Researchers</title>
+      <link>http://localhost:1313/author/researchers/</link>
+    </image>
+    
+    <item>
+      <title>David Sandberg</title>
+      <link>http://localhost:1313/author/david-sandberg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/author/david-sandberg/</guid>
+      <description>&lt;p&gt;Joan Camuñas-Soler is an Assistant Professor in Bioinformatics for Translational Medicine at the University of Gothenburg and Wallenberg Molecular Medicine Fellow.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Marta Gironella-Torrent</title>
+      <link>http://localhost:1313/author/marta-gironella-torrent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/author/marta-gironella-torrent/</guid>
+      <description>&lt;p&gt;Joan Camuñas-Soler is an Assistant Professor in Bioinformatics for Translational Medicine at the University of Gothenburg and Wallenberg Molecular Medicine Fellow.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mercedes Dalman</title>
+      <link>http://localhost:1313/author/mercedes-dalman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/author/mercedes-dalman/</guid>
+      <description>&lt;p&gt;Joan Camuñas-Soler is an Assistant Professor in Bioinformatics for Translational Medicine at the University of Gothenburg and Wallenberg Molecular Medicine Fellow.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Oliver Forsell</title>
+      <link>http://localhost:1313/author/oliver-forsell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/author/oliver-forsell/</guid>
+      <description>&lt;p&gt;Joan Camuñas-Soler is an Assistant Professor in Bioinformatics for Translational Medicine at the University of Gothenburg and Wallenberg Molecular Medicine Fellow.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sandra Postic</title>
+      <link>http://localhost:1313/author/sandra-postic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/author/sandra-postic/</guid>
+      <description>&lt;p&gt;Joan Camuñas-Soler is an Assistant Professor in Bioinformatics for Translational Medicine at the University of Gothenburg and Wallenberg Molecular Medicine Fellow.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Yike Xie</title>
+      <link>http://localhost:1313/author/yike-xie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/author/yike-xie/</guid>
+      <description>&lt;p&gt;Joan Camuñas-Soler is an Assistant Professor in Bioinformatics for Translational Medicine at the University of Gothenburg and Wallenberg Molecular Medicine Fellow.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

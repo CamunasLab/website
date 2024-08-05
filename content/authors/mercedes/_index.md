@@ -2,19 +2,20 @@
 # Display name
 title: Mercedes Dalman
 
-# Full name (for SEO)
-first_name: Mercedes
-last_name: Dalman
+# Full Name (for SEO)
+first_name: Joan
+last_name: Camuñas-Soler
+
 
 # Username (this should match the folder name)
 authors:
-  - mercedes
+  - researchers
 
 # Is this the primary user of the site?
-superuser: false
+superuser: true
 
 # Role/position
-role: PhD student
+role: Assistant Professor
 
 # Organizations/Affiliations
 organizations:
@@ -22,21 +23,21 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include xxx
+bio: My research interests include xxx.
 
 interests:
-  - Artificial Intelligence
-  - Spatial Transcriptomics
-  - Information Retrieval
+  - Single-cell Genomics
+  - Biophysics
+  - Precision Medicine
 
 education:
   courses:
-    - course: MsC in Computer Science
-      institution: Chalmers University
-      year: 2023
-    - course: BsC in Biotechnology
-      institution: Chalmers University
-      year: 2021
+    - course: Postdoc
+      institution: Stanford University
+      year: 2019
+    - course: PhD in Physics
+      institution: Universitat de Barcelona
+      year: 2015
 
 
 # Social/Academic Networking
@@ -46,13 +47,13 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:mercedes.dalman@gu.se'
+    link: 'mailto:joan.camunas@gu.se'
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/MercedesDalman
+    link: https://x.com/JoanCamunas
   - icon: google-scholar
     icon_pack: ai
-    link:
+    link: https://scholar.google.es/citations?user=MbtZqYYAAAAJ&hl=en
   - icon: github
     icon_pack: fab
     link: https://github.com/gcushen
@@ -65,13 +66,13 @@ social:
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
 
+# Highlight the author in author lists? (true/false)
+highlight_name: false
+
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Researchers
-  - Grad Students
+  - PhD Students
 ---
 
-Mercedes Dalman is a PhD student with ....
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Joan Camuñas-Soler is an Assistant Professor in Bioinformatics for Translational Medicine at the University of Gothenburg and Wallenberg Molecular Medicine Fellow.
