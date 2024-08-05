@@ -28,7 +28,7 @@ sections:
         latitude: '57.68611268875995'
         longitude: '11.95872255330746'
       text: If you are interested in joining our team, please send us an email. We always welcome application for postdocs, PhD students, research assistants, MsC Students, etc.
-      email: joan.camunas (att) gu.se
+      email: joan.camunas@gu.se
       phone:
       address:
         organization:
