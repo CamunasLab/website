@@ -5,7 +5,10 @@ date: 2024-08-04
 type: landing
 
 sections:
+# Home
   - block: slider
+    id: home-section
+
     content:
       slides:
       - title: Investigating cellular heterogeneity in human tissue
@@ -52,12 +55,142 @@ sections:
       # Duration of transition between slides (in ms)
       interval: 1500
 
+# About
+
   - block: markdown
+    id: about-section
+    title: About Us
+  - block: hero
+    content:
+      title: About Us
+      image:
+        filename: team.jpg  
+      text:
+         We are an interdisciplinary research group at the interface of genomics, biophysics, and precision medicine. Our mission is to develop new genomic technologies to map and model cellular dysfunction in human disease.
+
+
+# News
+  - block: collection
+    id: news-section
+    content:
+      title: Latest News
+      subtitle:
+      text:
+      count: 5
+      filters:
+        author: ''
+        category: ''
+        exclude_featured: false
+        publication_type: ''
+        tag: ''
+      offset: 0
+      order: desc
+      page_type: post
+    design:
+      view: card
+      columns: '1'
+
+# People
+  - block: people
+    id: people-section
+    content:
+      title: Meet the Team
+      # Choose which groups/teams of users to display.
+      #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
+      user_groups:
+          - Principal Investigators
+          - Postdoctoral Researchers
+          - PhD Students
+          - Research Assistants
+          - Visitors
+          - Alumni
+      sort_by: Params.last_name
+      sort_ascending: true
+    design:
+      show_interests: false
+      show_role: true
+      show_social: true
+
+
+ 
+# Publications
+  - block: collection
+    id: publications-section
+    content:
+      title: Latest Preprints
+      text: ""
+      count: 5
+      filters:
+        folders:
+          - publication
+        publication_type: 'article'
+    design:
+      view: citation
+      columns: '1'
+
+ 
+    
+  - block: hero
+    id: contact-section
+    content:
+      title: Contact
+      subtitle: ''
+      text:
+      image:
+        filename: collab.jpg
+    view: showcase
+
+# Contact
+  - block: contact
+    features:
+      map:
+        provider: 'google'
+        api_key: ''
+        zoom: 15
     content:
       title:
-      subtitle:
-      text: |
-        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
+      coordinates:
+        latitude: '57.68611268875995'
+        longitude: '11.95872255330746'
+      text: If you are interested in joining our team, please send us an email. We always welcome application for postdocs, PhD students, research assistants, MsC Students, etc.
+      email: joan.camunas@gu.se
+      phone:
+      address:
+        organization:
+        street: Dept. Medical Biochemistry & Cell Biology, Medicinaregatan 9C
+        city: Gothenburg
+        region:
+        postcode: '41390'
+        country: Sweden
+        country_code: SE
+
+      #directions: Enter 9C and go one level up. First glass door on the right as you exit the elevator.
+      #office_hours:
+      contact_links:
+        - icon: twitter
+          icon_pack: fab
+          name: Twitter
+          link: 'https://x.com/JoanCamunas'
+      #appointment_url: 'https://calendly.com'
+      #contact_links:
+      #  - icon: comments
+      #    icon_pack: fas
+      #    name: Discuss on Forum
+      #    link: 'https://discourse.gohugo.io'
+
+      # Automatically link email and phone or display as text?
+      autolink: true
+
+      # Email form provider
+      #form:
+      #  provider: netlify
+      #  formspree:
+      #    id:
+      #  netlify:
+          # Enable CAPTCHA challenge to reduce spam?
+      #    captcha: false
     design:
       columns: '1'
+
+
 ---

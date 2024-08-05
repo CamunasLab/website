@@ -4,18 +4,22 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
+  - name: Home
+    url: "#home-section"
+    weight: 1
   - name: About
-    url: about
-    weight: 10
+    url: "#about-section"
+    weight: 2
   - name: News
-    url: post
-    weight: 20
+    url: "#news-section"
+    weight: 3
   - name: People
-    url: people
-    weight: 40
+    url: "#people-section"
+    weight: 4
   - name: Publications
-    url: publication
-    weight: 50
+    url: "#publications-section"
+    weight: 5
   - name: Contact
-    url: contact
-    weight: 60
+    url: "#contact-section"
+    weight: 6
+
