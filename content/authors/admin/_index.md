@@ -5,6 +5,7 @@ title: Joan Camuñas-Soler
 # Full Name (for SEO)
 first_name: Joan
 last_name: Camuñas-Soler
+order_pos: 1
 
 
 # Username (this should match the folder name)
@@ -47,16 +48,16 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:joan.camunas@gu.se'
+    link: 'mailto: marta.gironella.torrent@gu.se'
   - icon: twitter
     icon_pack: fab
-    link: https://x.com/JoanCamunas
+    link:
   - icon: google-scholar
     icon_pack: ai
-    link: https://scholar.google.es/citations?user=MbtZqYYAAAAJ&hl=en
+    link:
   - icon: github
     icon_pack: fab
-    link: https://github.com/gcushen
+    link:
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -73,6 +74,7 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Principal Investigators
+  - Members
 ---
 
-Joan Camuñas-Soler is an Assistant Professor in Bioinformatics for Translational Medicine at the University of Gothenburg and Wallenberg Molecular Medicine Fellow.
+Marta Gironella-Torrent is a postdoc in the lab since 2022.
