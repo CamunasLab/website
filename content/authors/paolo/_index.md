@@ -1,11 +1,12 @@
 ---
 # Display name
-title: Sandra Postic
+title: Paolo Valentini
 
 # Full Name (for SEO)
-first_name: Sandra
-last_name: Postic
-order_pos: 3
+first_name: Paolo
+last_name: Valentini
+order_pos: 8
+
 
 # Username (this should match the folder name)
 authors:
@@ -15,7 +16,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Postdoctoral Researcher
+role: Research Assistant
 
 # Organizations/Affiliations
 organizations:
@@ -30,11 +31,11 @@ interests:
 
 education:
   courses:
-    - course: PhD in Physiology
-      institution: Medical University of Vienna
+    - course: MSc in Cell and Molecular Biology
+      institution: Uppsala University
       year:
-    - course: MSc in Molecular Biology
-      institution: University of Zagreb
+    - course: BSc in Biology
+      institution: University of Modena and Reggio Emilia
       year:
 
 
@@ -45,7 +46,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto: sandra.postic@gu.se'
+    link: 'mailto:paolo.valentini@gu.se'
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -62,8 +63,8 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Postdoctoral Researchers
+  - Research Assistants
   - Members
 ---
 
-Sandra Postic is a Postdoctoral Scholar in the lab since 2023.
+Paolo Valentini is a research assistant in the lab since 2022.

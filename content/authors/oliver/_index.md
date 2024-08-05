@@ -3,19 +3,19 @@
 title: Oliver Forsell
 
 # Full Name (for SEO)
-first_name: Joan
-last_name: Camuñas-Soler
-
+first_name: Oliver
+last_name: Forsell
+order_pos: 6
 
 # Username (this should match the folder name)
 authors:
   - researchers
 
 # Is this the primary user of the site?
-superuser: true
+superuser: false
 
 # Role/position
-role: Assistant Professor
+role: PhD Student
 
 # Organizations/Affiliations
 organizations:
@@ -26,18 +26,16 @@ organizations:
 bio: My research interests include xxx.
 
 interests:
-  - Single-cell Genomics
-  - Biophysics
-  - Precision Medicine
+
 
 education:
   courses:
-    - course: Postdoc
-      institution: Stanford University
-      year: 2019
-    - course: PhD in Physics
-      institution: Universitat de Barcelona
-      year: 2015
+    - course: MsC in Biotechnology
+      institution: Chalmers University
+      year:
+    - course: BsC in Biotechnology
+      institution: Chalmers University
+      year:
 
 
 # Social/Academic Networking
@@ -47,16 +45,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:joan.camunas@gu.se'
-  - icon: twitter
-    icon_pack: fab
-    link: https://x.com/JoanCamunas
-  - icon: google-scholar
-    icon_pack: ai
-    link: https://scholar.google.es/citations?user=MbtZqYYAAAAJ&hl=en
-  - icon: github
-    icon_pack: fab
-    link: https://github.com/gcushen
+    link: 'mailto:oliver.forsell@gu.se'
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -73,7 +62,7 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - PhD Students
-  - 
+  - Members
 ---
 
-Joan Camuñas-Soler is an Assistant Professor in Bioinformatics for Translational Medicine at the University of Gothenburg and Wallenberg Molecular Medicine Fellow.
+Oliver Forsell is a PhD student in the lab since 2023.
