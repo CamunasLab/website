@@ -98,21 +98,31 @@ sections:
       # Choose which groups/teams of users to display.
       #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
       user_groups:
-          - Principal Investigators
-          - Postdoctoral Researchers
-          - PhD Students
-          - Research Assistants
+          - Members
           - Visitors
           - Alumni
-      sort_by: Params.last_name
+      sort_by: Params.order_pos
       sort_ascending: true
     design:
       show_interests: false
       show_role: true
       show_social: true
 
+  - block: markdown
+    content:
+      title: ' '
+      subtitle: '**Alumni**'
+      text: |
 
- 
+          | Name | Position in the lab    | Years | Next Position                 |
+          |--------------------|------------|-------|-------------------------------|
+          | Emma Walsh | Research Assistant | 2023  | PhD student, Cambridge University |
+
+      design:
+          # Choose how many columns the section has. Valid values: '1' or '2'.
+          columns: '1'
+
+
 # Publications
   - block: collection
     id: publications-section
@@ -128,8 +138,8 @@ sections:
       view: citation
       columns: '1'
 
- 
-    
+
+
   - block: hero
     id: contact-section
     content:
