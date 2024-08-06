@@ -1,0 +1,242 @@
+<style>
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#news-flters {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#news-flters li {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+#news-flters .filter-active {
+  background-color: #6a70e091;
+  color: #fff;
+}
+
+#news-flters li:hover {
+  background-color: #6a70e0cc;
+  color: #fff;
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.news-item {
+  position: relative;
+  width: calc(33.333% - 20px); /* Adjust based on spacing and layout */
+  height: 200px; /* Adjust height based on design */
+  overflow: hidden;
+}
+
+.news-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.magnify-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.magnify-icon:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal (Popup) Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure modal is on top */
+}
+
+.modal-content {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+}
+
+.modal-content #modal-text {
+  margin-top: 20px;
+  max-height: 300px; /* Adjust based on design */
+  overflow-y: auto;
+}
+
+</style>
+
+<section id="news-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Latest News</h2>
+ 
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="news-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-message">Messages</li>
+          <li data-filter=".filter-talk">Talks</li>
+          <li data-filter=".filter-experiment">Experiments</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="news-container">
+      {{ range where .Site.RegularPages "Type" "post" }}
+        <div class="news-item {{ range .Params.tags }}filter-{{ . }} {{ end }}">
+          <img src="{{ .Params.featureimage | relURL }}" alt="{{ .Title }}">
+          <div class="magnify-icon">
+            <span>&#128269;</span> <!-- Magnifying glass emoji -->
+          </div>
+          <!-- Store the post content in a hidden element -->
+          <div class="news-content" style="display: none;">
+            {{ .Content }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Modal (Popup) -->
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content">
+    <img id="modal-img" src="" alt="Enlarged Image">
+    <div id="modal-text"></div> <!-- Content will be injected here -->
+  </div>
+</div>
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filters = document.querySelectorAll('#news-flters li');
+  const items = document.querySelectorAll('.news-item');
+
+  // Initially show all items
+  items.forEach(item => item.style.display = 'block');
+
+  filters.forEach(filter => {
+    filter.addEventListener('click', function() {
+      const filterClass = this.getAttribute('data-filter');
+
+      // Remove active class from all filters
+      filters.forEach(f => f.classList.remove('filter-active'));
+      // Add active class to the clicked filter
+      this.classList.add('filter-active');
+
+      // Show or hide items based on filter
+      items.forEach(item => {
+        if (filterClass === '*' || item.classList.contains(filterClass.substring(1))) {
+          item.style.display = 'block'; // Show item
+        } else {
+          item.style.display = 'none'; // Hide item
+        }
+      });
+    });
+  });
+
+  // Magnify glass functionality
+  const magnifyIcons = document.querySelectorAll('.magnify-icon');
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalText = document.getElementById('modal-text');
+  const close = document.querySelector('.modal .close');
+
+  magnifyIcons.forEach(icon => {
+    icon.addEventListener('click', function() {
+      const imgSrc = this.parentElement.querySelector('img').src;
+      const content = this.parentElement.querySelector('.news-content').innerHTML;
+      
+      // Populate modal with image and content
+      modalImg.src = imgSrc;
+      modalText.innerHTML = content;
+      modal.style.display = 'flex';
+      
+      // Hide the feature image
+      this.parentElement.querySelector('img').style.display = 'none';
+    });
+  });
+
+  close.addEventListener('click', function() {
+    modal.style.display = 'none';
+    
+    // Restore visibility of the feature image
+    document.querySelectorAll('.news-item img').forEach(img => img.style.display = 'block');
+  });
+
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+      
+      // Restore visibility of the feature image
+      document.querySelectorAll('.news-item img').forEach(img => img.style.display = 'block');
+    }
+  });
+});
+
+
+</script>
+
+
+
+

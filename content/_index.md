@@ -68,24 +68,14 @@ sections:
       text:
          We are an interdisciplinary research group at the interface of genomics, biophysics, and precision medicine. Our mission is to develop new genomic technologies to map and model cellular dysfunction in human disease.
 
-
 # News
-  - block: collection
+  - block: markdown
     id: news-section
     content:
-      title: Latest News
+      title: 
       subtitle:
-      text:
-      count: 5
-      filters:
-        author: ''
-        category: ''
-        exclude_featured: false
-        publication_type: ''
-        tag: ''
-      offset: 0
-      order: desc
-      page_type: post
+      text: |
+        {{< news_poput >}}
     design:
       view: card
       columns: '1'
@@ -123,32 +113,28 @@ sections:
           columns: '1'
 
 
-# Publications
-  - block: collection
+# Publications and Resources
+  - block: markdown
     id: publications-section
     content:
-      title: Latest Preprints
-      text: ""
-      count: 5
-      filters:
-        folders:
-          - publication
-        publication_type: 'article'
-    design:
-      view: citation
-      columns: '1'
-
-
-
-  - block: hero
-    id: contact-section
-    content:
-      title: Contact
+      title: Publications and Resources
       subtitle: ''
-      text:
-      image:
-        filename: collab.jpg
-    view: showcase
+      text: |
+        {{% publications_resources %}}
+      design:
+        columns: '1'
+        background:
+          image: 
+            filename: 
+            filters:
+              brightness: 1
+            parallax: false
+            position: center
+            size: cover
+            text_color_light: true
+        spacing:
+          padding: ['20px', '0', '20px', '0']
+        css_class: fullscreen
 
 # Contact
   - block: contact

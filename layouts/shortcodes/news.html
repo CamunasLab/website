@@ -1,0 +1,150 @@
+<style>
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #news-flters {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #news-flters li {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 16px;
+  }
+
+  #news-flters .filter-active {
+    background-color: #6a70e091;
+    color: #fff;
+  }
+
+  #news-flters li:hover {
+    background-color: #6a70e0cc;
+    color: #fff;
+  }
+
+  .news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .news-item {
+  position: relative;
+  width: calc(33.333% - 20px); /* Adjust based on spacing and layout */
+  height: 200px; /* Adjust height based on design */
+  display: none; /* Initially hide all items */
+  overflow: hidden;
+}
+
+.news-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-item::before, .news-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.news-item::before {
+  top: -20px; /* Adjust based on the point size */
+  left: 50%;
+  border-width: 20px 20px 0 20px; /* Adjust based on the point size */
+  border-color: red transparent transparent transparent; /* Match the border color with your image or background */
+  transform: translateX(-50%);
+}
+
+.news-item::after {
+  bottom: -20px; /* Adjust based on the point size */
+  left: 50%;
+  border-width: 0 20px 20px 20px; /* Adjust based on the point size */
+  border-color: transparent transparent red transparent; /* Match the border color with your image or background */
+  transform: translateX(-50%);
+}
+
+  .news-item a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: inherit; /* Ensure text color is inherited */
+  }
+
+  .news-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<section id="news-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Latest News</h2>
+      <p>Follow the lab</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="news-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-message">Messages</li>
+          <li data-filter=".filter-talk">Talks</li>
+          <li data-filter=".filter-experiment">Experiments</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="news-container">
+      {{ range where .Site.RegularPages "Type" "post" }}
+        <div class="news-item {{ range .Params.tags }}filter-{{ . }} {{ end }}">
+          <a href="{{ .Permalink }}">
+            <img src="{{ .Params.featureimage | relURL }}" alt="{{ .Title }}">
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filters = document.querySelectorAll('#news-flters li');
+    const items = document.querySelectorAll('.news-item');
+
+    // Initially show all items
+    items.forEach(item => item.style.display = 'block');
+
+    filters.forEach(filter => {
+      filter.addEventListener('click', function() {
+        const filterClass = this.getAttribute('data-filter');
+
+        // Remove active class from all filters
+        filters.forEach(f => f.classList.remove('filter-active'));
+        // Add active class to the clicked filter
+        this.classList.add('filter-active');
+
+        // Show or hide items based on filter
+        items.forEach(item => {
+          if (filterClass === '*' || item.classList.contains(filterClass.substring(1))) {
+            item.style.display = 'block'; // Show item
+          } else {
+            item.style.display = 'none'; // Hide item
+          }
+        });
+      });
+    });
+  });
+</script>

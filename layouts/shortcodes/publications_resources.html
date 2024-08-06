@@ -1,0 +1,79 @@
+<style>
+.custom-box {
+  display: flex; /* Ensure the items are displayed in a row */
+  flex-wrap: wrap; /* Allow wrapping of items if there's not enough space */
+  margin: 20px 0;
+}
+
+.custom-box > div {
+  flex: 0 0 30%; /* Allow each item to take up 30% of the container width */
+  max-width: 30%; /* Limit the maximum width of each item */
+  text-align: center;
+  margin: 10px 1.66%; /* Add margin for spacing between items */
+  background: #d3e9fe;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.custom-box > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 8px rgba(0,0,0,0.2);
+  background-color: #d3e9fe;
+}
+
+.custom-box .icon {
+  margin-bottom: 10px;
+}
+
+.custom-box .icon img {
+  width: 70px;
+  height: 70px;
+  padding: 10px; /* Add padding for the blue square */
+  border: 2px solid #f8f9fa; /* Border for the square */
+  border-radius: 10px; /* Rounded corners for the square */
+  background-color: #f8f9fa; /* Background color for the icon */
+  margin: 0 auto; /* Center the icon */
+  max-width: fit-content; /* Fit the width to the content */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.custom-box a {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Make the link block level to center it */
+}
+
+.custom-box a:hover {
+  background-color: #d3e9fe; /* Change background on hover */
+  border-color: #0056b3; /* Darker blue on hover */
+}
+
+</style>
+
+<div class="custom-box">
+    <div>
+      <div class="icon"><img src="/img/publications.png" alt="Publications icon"></div>
+      <a href="/publication">
+        <h3>Publications</h3>
+        <p>Explore our latest research publications.</p>
+      </a>
+    </div>
+  
+<div>
+      <div class="icon"><img src="/img/protocol.PNG" alt="Protocols icon"></div>
+      <a href="#">
+        <h3>Protocols</h3>
+        <p>Our contribution to the research community with several protocols and techniques.</p>
+      </a>
+    </div>
+  
+<div>
+      <div class="icon"><img src="/img/github.png" alt="GitHub icon"></div>
+      <a href="#">
+        <h3>Open Code</h3>
+        <p>We are committed to open science; our code is freely available on GitHub.</p>
+      </a>
+    </div>
+  </div>
+  
