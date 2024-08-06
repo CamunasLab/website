@@ -1,0 +1,77 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}"> <!-- Link to your main stylesheet -->
+    <style>
+        .protocol-list {
+            list-style: none;
+            padding: 0;
+        }
+        .protocol-list li {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .protocol-list a {
+            text-decoration: none;
+            color: #666;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            transition: color 0.3s;
+        }
+        .protocol-list a:hover {
+            color: #6a70e0cc;
+        }
+        .protocol-list p {
+            margin: 0;
+            color: #555;
+        }
+        .protocol-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .protocol-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .protocol-header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="protocol-header">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Description }}</p>
+        </header>
+        <main>
+            <ul class="protocol-list">
+                {{ range .Pages }}
+                    <li>
+                        {{ if .Params.file }}
+                            <a href="{{ .Params.file | relURL }}" target="_blank">{{ .Title }}</a>
+                        {{ else if .RelPermalink }}
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        {{ end }}
+                        <p>{{ .Summary }}</p>
+                    </li>
+                {{ end }}
+            </ul>
+        </main>
+        <footer>
+            <!-- Include your site's footer here -->
+        </footer>
+    </div>
+</body>
+</html>
+{{ end }}

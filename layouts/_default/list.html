@@ -1,15 +1,16 @@
 {{ define "main" }}
-<div class="news-container">
-  {{ range where .Pages "Type" "post" }}
-    <div class="news-item filter-{{ index .Params.tags 0 }}">
+<div class="protocols-container">
+  {{ range .Pages }}
+    <div class="protocol-item">
       <a href="{{ .Permalink }}">
-        <img src="{{ .Params.featureimage | relURL }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
-        <div class="news-info">
-          <h4>{{ .Title }}</h4>
-          <p>{{ index .Params.tags 0 }}</p>
-          <div class="news-links">
-            <i class="material-icons">zoom_in</i>
-          </div>
+        {{ with .Params.image }}
+          <img src="{{ .Params.image.src | relURL }}" alt="{{ .Title }}" class="protocol-image">
+        {{ else }}
+          <img src="/path/to/default/icon.png" alt="{{ .Title }}" class="protocol-image">
+        {{ end }}
+        <div class="protocol-info">
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.description }}</p>
         </div>
       </a>
     </div>
