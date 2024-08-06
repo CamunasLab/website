@@ -72,16 +72,17 @@
 /* Modal (Popup) Styles */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed;
+  position: fixed; /* Fixed position to cover entire viewport */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensure modal is on top */
+  z-index: 9999; /* Ensure modal is on top of all other elements */
 }
+
 
 .modal-content {
   position: relative;
@@ -116,6 +117,11 @@
   max-height: 300px; /* Adjust based on design */
   overflow-y: auto;
 }
+body.modal-open {
+  overflow: hidden; /* Prevent background scrolling */
+}
+
+
 
 </style>
 
@@ -130,7 +136,7 @@
       <div class="col-lg-12 d-flex justify-content-center">
         <ul id="news-flters">
           <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-message">Messages</li>
+          <li data-filter=".filter-event">Events</li>
           <li data-filter=".filter-talk">Talks</li>
           <li data-filter=".filter-experiment">Experiments</li>
         </ul>
@@ -233,6 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
 
 
 </script>

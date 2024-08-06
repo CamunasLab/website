@@ -138,6 +138,7 @@ sections:
 
 # Contact
   - block: contact
+    id: contact-section
     features:
       map:
         provider: 'google'
