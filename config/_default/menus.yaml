@@ -16,7 +16,7 @@ main:
   - name: People
     url: "#people-section"
     weight: 4
-  - name: Publications
+  - name: Publications & Resources
     url: "#publications-section"
     weight: 5
   - name: Contact

@@ -1,0 +1,101 @@
+<style>
+  .custom-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+
+  .custom-box > div {
+    flex: 0 0 30%;
+    max-width: 30%;
+    text-align: center;
+    margin: 10px 1.66%;
+    background: #d3e9fe;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .custom-box > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 8px rgba(0,0,0,0.2);
+    background-color: #d3e9fe;
+  }
+
+  .custom-box .icon {
+    margin-bottom: 10px;
+  }
+
+  .custom-box .icon img {
+    width: 70px;
+    height: 70px;
+    padding: 10px; /* Add padding for the blue square */
+    border: 2px solid #f8f9fa; /* Blue border for the square */
+    border-radius: 10px; /* Rounded corners for the square */
+    background-color: #f8f9fa; /* Background color for the link */
+    margin: 0 auto; /* Center the link */
+    max-width: fit-content; /* Fit the width to the content */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+
+  .custom-box a {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Make the link block level to center it */
+
+  }
+
+  .custom-box a:hover {
+    background-color: #d3e9fe; /* Change background on hover */
+    border-color: #0056b3; /* Darker blue on hover */
+  }
+</style>
+
+<div class="custom-box">
+  <div>
+    <div class="icon"><img src="/img/publications.png" alt="GitHub icon"></div>
+    <a href="/publication">
+      <h3>Publications</h3>
+      <p>Explore our latest research publications.</p>
+    </a>
+  </div>
+
+  <div>
+    <div class="icon"><img src="/img/lab.png" ></div> 
+    <a href="/resources">
+      <h3>Lab</h3>
+      <p>Additional materials and links.</p>
+    </a>
+  </div>
+
+   <div>
+    <div class="icon"><img src="img/humanproteinatlas.png" alt="Human Protein Atlas"></div>
+    <a href="https://www.proteinatlas.org/" target="_blank">
+      <h3>Human Protein Atlas</h3>
+      <p>External resource for protein information.</p>
+    </a>
+  </div>
+</div>
+<div class="custom-box">
+  <div>
+    <div class="icon"><img src="/img/protocol.PNG" alt="Resource 4"></div>
+    <a href="#">
+      <h3>Protocols</h3>
+      <p>Our contribution to the research community with several protocols and techniques</p>
+    </a>
+  </div>
+  <div>
+    <div class="icon"><img src="/img/onedrive.png" alt="Resource 5"></div>
+    <a href="#">
+      <h3>OneDrive</h3>
+      <p>Lab's OneDrive shared folders (only for lab members)</p>
+    </a>
+  </div>
+  <div>
+    <div class="icon"><img src="/img/github.png" alt="Resource 6"></div>
+    <a href="#">
+      <h3>Open code</h3>
+      <p>We are committed with open science, our code is freely available in GitHub.</p>
+    </a>
+  </div>
+</div>
