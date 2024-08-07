@@ -10,16 +10,16 @@
   max-width: 30%; /* Limit the maximum width of each item */
   text-align: center;
   margin: 10px 1.66%; /* Add margin for spacing between items */
-  background: #d3e9fe;
+  background: #5446cf;
   padding: 20px;
   border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Include background-color in transition */
 }
 
 .custom-box > div:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 8px rgba(0,0,0,0.2);
-  background-color: #d3e9fe;
+  background-color: #8c83e2bd; /* Change the background color of the box on hover */
 }
 
 .custom-box .icon {
@@ -42,12 +42,17 @@
   text-decoration: none;
   color: inherit;
   display: block; /* Make the link block level to center it */
+  transition: color 0.3s; /* Smooth transition for text color */
 }
 
 .custom-box a:hover {
-  background-color: #d3e9fe; /* Change background on hover */
-  border-color: #0056b3; /* Darker blue on hover */
+  color: inherit; /* Ensure the link color does not change on hover */
 }
+
+.custom-box h3, .custom-box p {
+  margin: 0; /* Remove default margin for better alignment */
+}
+
 
 </style>
 
