@@ -4,10 +4,9 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Appearance
-
 appearance:
   theme_day: minimal
-  theme_night:
+  theme_night: dark-mode # Define your dark mode theme
   font: native
   font_size: L
 
@@ -29,15 +28,14 @@ marketing:
     google: ''
     baidu: ''
 
-# Site header
-
+# Header
 header:
   navbar:
     enable: true
     align: r
     show_logo: true
-    show_language: false
-    show_day_night: true
+    show_language: true
+    show_day_night: true # This will enable the day/night toggle button
     show_search: true
     highlight_active_link: false
 
