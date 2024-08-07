@@ -119,7 +119,7 @@ sections:
       title: Publications and Resources
       subtitle: ''
       text: |
-        {{% publications_resources %}} # Placeholder for publications and resources content
+        {{% publications_resources %}} 
       design:
         columns: '1'
         background:
@@ -144,7 +144,7 @@ sections:
         api_key: '' # Google Maps API key
         zoom: 15 # Zoom level for the map
     content:
-      title: # Title for the contact section
+      title: Contact # Title for the contact section
       coordinates:
         latitude: '57.68611268875995'
         longitude: '11.95872255330746'

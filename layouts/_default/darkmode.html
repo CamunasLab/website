@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Toggle Example</title>
+  <style>
+    /* Base styles for light mode */
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode a {
+      color: #8ab4f8;
+    }
+
+    .header, .footer {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .header {
+      background-color: #f1f1f1;
+    }
+
+    body.dark-mode .header {
+      background-color: #333333;
+    }
+
+    .footer {
+      background-color: #f1f1f1;
+    }
+
+    body.dark-mode .footer {
+      background-color: #333333;
+    }
+
+    #theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+
+    #toggle-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 24px; /* Adjust icon size */
+      color: #000; /* Default color for light mode */
+    }
+
+    #toggle-button .moon-icon {
+      display: none; /* Hide moon icon by default */
+    }
+
+    body.dark-mode #toggle-button .sun-icon {
+      display: none; /* Hide sun icon in dark mode */
+    }
+
+    body.dark-mode #toggle-button .moon-icon {
+      display: inline; /* Show moon icon in dark mode */
+    }
+
+    #toggle-button:active {
+      opacity: 0.8;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="header">
+    <h1>Welcome to Dark Mode Example</h1>
+  </div>
+
+  <p>This is a sample content area. Click the button at the top right to toggle dark mode.</p>
+  
+  <div id="theme-toggle">
+    <button id="toggle-button" aria-label="Toggle theme">
+      <i class="sun-icon" aria-hidden="true">&#9728;</i> <!-- Sun icon -->
+      <i class="moon-icon" aria-hidden="true">&#9790;</i> <!-- Moon icon -->
+    </button>
+  </div>
+
+  <div class="footer">
+    <p>Footer Content</p>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleButton = document.getElementById('toggle-button');
+      const body = document.body;
+
+      // Load saved theme from localStorage
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+      } else {
+        body.classList.remove('dark-mode');
+      }
+
+      // Event listener for the toggle button
+      toggleButton.addEventListener('click', function() {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('theme', 'light');
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
