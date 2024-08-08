@@ -4,6 +4,7 @@
   text-align: center;
   margin-bottom: 30px;
 }
+
 /* Add more space below the news section */
 #news-section {
   padding-bottom: 400px; /* Adjust as needed */
@@ -63,6 +64,28 @@
   transform: scale(1.05);
 }
 
+/* Dark overlay and centered title */
+.news-title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s; /* Smooth transition for opacity */
+  font-weight: bold; /* Make the title bold */
+}
+
+.news-item:hover .news-title-overlay {
+  opacity: 1;
+}
+
 /* Modal (Popup) styles */
 .modal {
   display: none; /* Hidden by default */
@@ -80,22 +103,32 @@
 /* Modal content area */
 .modal-content {
   position: relative;
-  max-width: 80%;
-  max-height: 80%;
+  width: 60%; /* Set width to 60% of viewport */
+  max-width: 800px; /* Max width to ensure it doesn't get too large */
   background: #fff;
-  padding: 20px;
-  border-radius: 8px;
+  border-radius: 0px;
+  overflow: hidden; /* Remove white space on the edges */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  overflow: auto; /* Enable scrolling if content overflows */
+  align-items: stretch;
 }
 
 /* Image within modal */
 .modal img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   object-fit: cover;
+  display: block; /* Ensure no white space on the edges */
+  max-height: 60%; /* Limit the height to 60% of the modal */
+}
+
+/* Content in modal */
+#modal-text {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure no overflow */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  flex-grow: 1; /* Allow the text to take up remaining space */
 }
 
 /* Close button styles */
@@ -108,21 +141,40 @@
   cursor: pointer;
 }
 
-/* Ensure text within modal scrolls if it overflows */
-.modal-content #modal-text {
-  margin-top: 20px;
-  max-height: 300px; /* Adjust based on design */
-  overflow-y: auto; /* Enable vertical scrolling */
-  width: 100%; /* Ensure it takes full width */
+/* Navigation arrow styles */
+.modal .nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001; /* Ensure arrows are above modal content */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  user-select: none; /* Prevent text selection */
 }
+
+/* Position for left arrow */
+.modal .nav-arrow.left {
+  left: 20px; /* Adjust to move the arrow closer to the content */
+}
+
+/* Position for right arrow */
+.modal .nav-arrow.right {
+  right: 20px; /* Adjust to move the arrow closer to the content */
+}
+
+
 
 /* Prevent background scrolling when modal is open */
 body.modal-open {
   overflow: hidden;
 }
 
-
 </style>
+
 
 <section id="news-section">
   <div class="container">
@@ -148,6 +200,8 @@ body.modal-open {
         <div class="news-item {{ range .Params.tags }}filter-{{ . }} {{ end }}">
           <!-- Feature image of the news post -->
           <img src="{{ .Params.featureimage | relURL }}" alt="{{ .Title }}">
+          <!-- Title overlay -->
+          <div class="news-title-overlay">{{ .Title }}</div>
           <!-- Hidden content of the news post for modal display -->
           <div class="news-content" style="display: none;">
             {{ .Content }}
@@ -161,6 +215,8 @@ body.modal-open {
 <!-- Modal (Popup) for displaying the enlarged image and content -->
 <div id="modal" class="modal">
   <span class="close">&times;</span>
+  <span class="nav-arrow left">&#9664;</span> <!-- Left arrow -->
+  <span class="nav-arrow right">&#9654;</span> <!-- Right arrow -->
   <div class="modal-content">
     <img id="modal-img" src="" alt="Enlarged Image">
     <div id="modal-text"></div> <!-- Content will be injected here -->
@@ -168,10 +224,8 @@ body.modal-open {
 </div>
 
 
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Get filter and news item elements
   const filters = document.querySelectorAll('#news-flters li');
   const items = document.querySelectorAll('.news-item');
 
@@ -199,53 +253,66 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Modal functionality
-  const itemsList = document.querySelectorAll('.news-item');
+  // Code for modal (unchanged)
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modal-img');
   const modalText = document.getElementById('modal-text');
   const close = document.querySelector('.modal .close');
+  const prevArrow = document.querySelector('.nav-arrow.left');
+  const nextArrow = document.querySelector('.nav-arrow.right');
 
-  itemsList.forEach(item => {
+  let currentIndex = -1;
+
+  function openModal(index) {
+    if (index < 0 || index >= items.length) return; // Out of bounds check
+    const item = items[index];
+    const imgSrc = item.querySelector('img').src;
+    const content = item.querySelector('.news-content').innerHTML;
+
+    modalImg.src = imgSrc;
+    modalText.innerHTML = content;
+    modal.style.display = 'flex';
+    document.body.classList.add('modal-open');
+    currentIndex = index;
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+  }
+
+  function showPrev() {
+    if (currentIndex > 0) {
+      openModal(currentIndex - 1);
+    }
+  }
+
+  function showNext() {
+    if (currentIndex < items.length - 1) {
+      openModal(currentIndex + 1);
+    }
+  }
+
+  items.forEach((item, index) => {
     item.addEventListener('click', function() {
-      // Get the image source and content of the clicked item
-      const imgSrc = this.querySelector('img').src;
-      const content = this.querySelector('.news-content').innerHTML;
-
-      // Populate modal with image and content
-      modalImg.src = imgSrc;
-      modalText.innerHTML = content;
-      modal.style.display = 'flex';
-
-      // Prevent body from scrolling
-      document.body.classList.add('modal-open');
+      openModal(index);
     });
   });
 
-  // Close the modal when the close button is clicked
-  close.addEventListener('click', function() {
-    modal.style.display = 'none';
+  close.addEventListener('click', closeModal);
 
-    // Allow body to scroll
-    document.body.classList.remove('modal-open');
-  });
-
-  // Close the modal when clicking outside of it
   window.addEventListener('click', function(event) {
     if (event.target === modal) {
-      modal.style.display = 'none';
-
-      // Allow body to scroll
-      document.body.classList.remove('modal-open');
+      closeModal();
     }
   });
+
+  if (prevArrow && nextArrow) {
+    prevArrow.addEventListener('click', showPrev);
+    nextArrow.addEventListener('click', showNext);
+  }
 });
 
 
 
-
 </script>
-
-
-
-
