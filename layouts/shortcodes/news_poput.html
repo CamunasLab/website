@@ -227,7 +227,33 @@ body.modal-open {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const filters = document.querySelectorAll('#news-flters li');
-  const itemsList = document.querySelectorAll('.news-item');
+  const items = document.querySelectorAll('.news-item');
+
+  // Initially show all items
+  items.forEach(item => item.style.display = 'block');
+
+  filters.forEach(filter => {
+    filter.addEventListener('click', function() {
+      // Get the filter class from the clicked filter
+      const filterClass = this.getAttribute('data-filter');
+
+      // Remove active class from all filters
+      filters.forEach(f => f.classList.remove('filter-active'));
+      // Add active class to the clicked filter
+      this.classList.add('filter-active');
+
+      // Show or hide items based on filter
+      items.forEach(item => {
+        if (filterClass === '*' || item.classList.contains(filterClass.substring(1))) {
+          item.style.display = 'block'; // Show item
+        } else {
+          item.style.display = 'none'; // Hide item
+        }
+      });
+    });
+  });
+
+  // Code for modal (unchanged)
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modal-img');
   const modalText = document.getElementById('modal-text');
@@ -238,8 +264,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentIndex = -1;
 
   function openModal(index) {
-    if (index < 0 || index >= itemsList.length) return; // Out of bounds check
-    const item = itemsList[index];
+    if (index < 0 || index >= items.length) return; // Out of bounds check
+    const item = items[index];
     const imgSrc = item.querySelector('img').src;
     const content = item.querySelector('.news-content').innerHTML;
 
@@ -262,12 +288,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function showNext() {
-    if (currentIndex < itemsList.length - 1) {
+    if (currentIndex < items.length - 1) {
       openModal(currentIndex + 1);
     }
   }
 
-  itemsList.forEach((item, index) => {
+  items.forEach((item, index) => {
     item.addEventListener('click', function() {
       openModal(index);
     });
@@ -286,6 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
     nextArrow.addEventListener('click', showNext);
   }
 });
+
 
 
 </script>
