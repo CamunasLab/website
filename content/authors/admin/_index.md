@@ -48,16 +48,16 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto: marta.gironella.torrent@gu.se'
+    link: 'mailto: joan.camunas@gu.se'
   - icon: twitter
     icon_pack: fab
-    link:
+    link: https://twitter.com/JoanCamunas
   - icon: google-scholar
     icon_pack: ai
-    link:
+    link: https://scholar.google.es/citations?user=MbtZqYYAAAAJ&
   - icon: github
     icon_pack: fab
-    link:
+    link: https://github.com/CamunasLab
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
