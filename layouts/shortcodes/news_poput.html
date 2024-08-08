@@ -6,7 +6,7 @@
 }
 /* Add more space below the news section */
 #news-section {
-  padding-bottom: 400px; /* Adjust as needed */
+  padding-bottom: 200px; /* Adjust as needed */
 }
 
 /* Filter styles */
@@ -63,6 +63,28 @@
   transform: scale(1.05);
 }
 
+/* Dark overlay and centered title */
+.news-title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s; /* Smooth transition for opacity */
+  font-weight: bold; /* Make the title bold */
+}
+
+.news-item:hover .news-title-overlay {
+  opacity: 1;
+}
+
 /* Modal (Popup) styles */
 .modal {
   display: none; /* Hidden by default */
@@ -98,6 +120,14 @@
   object-fit: cover;
 }
 
+/* Title in modal */
+.modal .modal-title {
+  font-size: 24px;
+  font-weight: bold; /* Make the title bold */
+  margin-top: 20px;
+  text-align: center;
+}
+
 /* Close button styles */
 .modal .close {
   position: absolute;
@@ -120,10 +150,7 @@
 body.modal-open {
   overflow: hidden;
 }
-
-
 </style>
-
 <section id="news-section">
   <div class="container">
     <div class="section-title">
@@ -148,8 +175,11 @@ body.modal-open {
         <div class="news-item {{ range .Params.tags }}filter-{{ . }} {{ end }}">
           <!-- Feature image of the news post -->
           <img src="{{ .Params.featureimage | relURL }}" alt="{{ .Title }}">
+          <!-- Title overlay -->
+          <div class="news-title-overlay">{{ .Title }}</div>
           <!-- Hidden content of the news post for modal display -->
           <div class="news-content" style="display: none;">
+            <h2 class="modal-title">{{ .Title }}</h2>
             {{ .Content }}
           </div>
         </div>
@@ -166,8 +196,6 @@ body.modal-open {
     <div id="modal-text"></div> <!-- Content will be injected here -->
   </div>
 </div>
-
-
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -240,12 +268,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
-
-
-
 </script>
-
-
-
-
