@@ -4,7 +4,7 @@ date: 2024-08-06
 tags:
   - experiment
   - event
-featureimage: "images/im_photoshoot.jpg"
+featureimage: "images/img_photoshoot.jpg"
 type: post
 ---
 
