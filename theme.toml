@@ -44,3 +44,7 @@ features = ["page builder", "widgets", "themes", "search", "research publication
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[params]
+  # The path to your publications data file
+  publications_data = "data/publications.yaml"

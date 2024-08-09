@@ -44,13 +44,27 @@
   gap: 20px;
 }
 
+/* Responsive design for news items */
 .news-item {
   position: relative;
-  width: calc(33.333% - 20px); /* Adjust based on spacing and layout */
+  width: calc(100% - 20px); /* Default to full width on small screens */
   height: 300px; /* Adjust height based on design */
   overflow: hidden;
   transition: transform 0.3s; /* Smooth transition for hover effect */
   cursor: pointer; /* Add this line to change the cursor to a pointer */
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 768px) {
+  .news-item {
+    width: calc(50% - 20px); /* Two items per row */
+  }
+}
+
+@media (min-width: 992px) {
+  .news-item {
+    width: calc(33.333% - 20px); /* Three items per row */
+  }
 }
 
 .news-item img {
@@ -103,7 +117,7 @@
 /* Modal content area */
 .modal-content {
   position: relative;
-  width: 60%; /* Set width to 60% of viewport */
+  width: 80%; /* Adjust width to be more responsive */
   max-width: 800px; /* Max width to ensure it doesn't get too large */
   background: #fff;
   border-radius: 0px;
@@ -166,12 +180,11 @@
   right: 20px; /* Adjust to move the arrow closer to the content */
 }
 
-
-
 /* Prevent background scrolling when modal is open */
 body.modal-open {
   overflow: hidden;
 }
+
 
 </style>
 

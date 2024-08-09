@@ -1,0 +1,49 @@
+2015:
+  - ID: dieterich_single-molecule_2015
+    author: Dieterich, E. and Camunas-Soler, J. and Ribezzi-Crivellari, M. and Seifert, U. and Ritort, F.
+    doi: 10.1038/nphys3435
+    journal: Nature Physics
+    month: November
+    number: '11'
+    pages: 971--977
+    title: Single-molecule measurement of the effective temperature in non-equilibrium steady states
+    url: https://www.nature.com/articles/nphys3435
+    volume: '11'
+    
+2018:
+  - ID: ngo_noninvasive_2018
+    author: Ngo, Thuy T. M. and Moufarrej, Mira N. and Rasmussen, Marie-Louise H. and Camunas-Soler, Joan, et al.
+    doi: 10.1126/science.aar3819
+    journal: Science
+    month: June
+    number: '6393'
+    pages: 1133--1136
+    title: Noninvasive blood tests for fetal development predict gestational age and preterm delivery
+    url: https://www.science.org/doi/10.1126/science.aar3819
+    volume: '360'
+    
+2020:
+  - ID: camunas-soler_patch-seq_2020
+    author: Camunas-Soler, Joan and Dai, Xiao-Qing and Hang, Yan, et al.
+    doi: 10.1016/j.cmet.2020.04.005
+    journal: Cell Metabolism
+    month: May
+    number: '5'
+    pages: 1017--1031.e4
+    title: Patch-{Seq} {Links} {Single}-{Cell} {Transcriptomes} to {Human} {Islet} {Dysfunction} in {Diabetes}
+    url: https://linkinghub.elsevier.com/retrieve/pii/S155041312030187X
+    volume: '31'
+    
+2021:
+  - ID: shrestha_combinatorial_2021
+    author: Shrestha, Shristi and Saunders, Diane C. and Walker, John T. and Camunas-Soler, Joan, et al.
+    doi: 10.1172/jci.insight.151621
+    journal: JCI Insight
+    month: September
+    number: '18'
+    pages: e151621
+    title: Combinatorial transcription factor profiles predict mature and functional human islet α and β cells
+    url: https://insight.jci.org/articles/view/151621
+    volume: '6'
+    
+# Continue adding other publications similarly...
