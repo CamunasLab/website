@@ -1,10 +1,10 @@
 ---
 title: "Getting Geeky for the Photoshoot Session"
-date: 2024-08-06
+date: 2024-04-06
 tags:
   - experiment
   - event
-featureimage: "images/img_photoshoot.jpg"
+featureimage: "images/im_photoshoot.jpg"
 type: post
 ---
 
