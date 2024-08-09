@@ -1,331 +1,332 @@
-<style>
-/* Center the section title */
-.section-title {
-  text-align: center;
-  margin-bottom: 30px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News Section</title>
+  <style>
+    /* Center the section title */
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-/* Add more space below the news section */
-#news-section {
-  padding-bottom: 400px; /* Adjust as needed */
-}
+    /* Add more space below the news section */
+    #news-section {
+      padding-bottom: 400px; /* Adjust as needed */
+    }
 
-/* Filter styles */
-#news-flters {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  margin-bottom: 30px;
-}
+    /* Filter styles */
+    #news-flters {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-#news-flters li {
-  display: inline-block;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin: 0 5px;
-  font-size: 16px;
-}
+    #news-flters li {
+      display: inline-block;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 0 5px;
+      font-size: 16px;
+    }
 
-#news-flters .filter-active {
-  background-color: #6a70e091;
-  color: #fff;
-}
+    #news-flters .filter-active {
+      background-color: #6a70e091;
+      color: #fff;
+    }
 
-#news-flters li:hover {
-  background-color: #6a70e0cc;
-  color: #fff;
-}
+    #news-flters li:hover {
+      background-color: #6a70e0cc;
+      color: #fff;
+    }
 
-/* News container styles */
-.news-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    /* News container styles */
+    .news-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-/* Responsive design for news items */
-.news-item {
-  position: relative;
-  width: calc(100% - 20px); /* Default to full width on small screens */
-  height: 300px; /* Adjust height based on design */
-  overflow: hidden;
-  transition: transform 0.3s; /* Smooth transition for hover effect */
-  cursor: pointer; /* Add this line to change the cursor to a pointer */
-}
+    /* Default to full width on small screens */
+    .news-item {
+      position: relative;
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Auto height based on content */
+      overflow: hidden;
+      transition: transform 0.3s; /* Smooth transition for hover effect */
+      cursor: pointer; /* Add this line to change the cursor to a pointer */
+    }
 
-/* Responsive design for larger screens */
-@media (min-width: 768px) {
-  .news-item {
-    width: calc(50% - 20px); /* Two items per row */
-  }
-}
+    @media (min-width: 768px) and (max-width: 991px) {
+      .news-item {
+        width: calc(50% - 20px); /* Two items per row on medium screens */
+      }
+    }
 
-@media (min-width: 992px) {
-  .news-item {
-    width: calc(33.333% - 20px); /* Three items per row */
-  }
-}
+    @media (min-width: 992px) {
+      .news-item {
+        width: calc(33.333% - 20px); /* Three items per row on large screens */
+      }
+    }
 
-.news-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .news-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-/* Hover effect to scale the news item */
-.news-item:hover {
-  transform: scale(1.05);
-}
+    /* Hover effect to scale the news item */
+    .news-item:hover {
+      transform: scale(1.05);
+    }
 
-/* Dark overlay and centered title */
-.news-title-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s; /* Smooth transition for opacity */
-  font-weight: bold; /* Make the title bold */
-}
+    /* Dark overlay and centered title */
+    .news-title-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s; /* Smooth transition for opacity */
+      font-weight: bold; /* Make the title bold */
+    }
 
-.news-item:hover .news-title-overlay {
-  opacity: 1;
-}
+    .news-item:hover .news-title-overlay {
+      opacity: 1;
+    }
 
-/* Modal (Popup) styles */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed position to cover entire viewport */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* Ensure modal is on top of all other elements */
-}
+    /* Modal (Popup) styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Fixed position to cover entire viewport */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* Ensure modal is on top of all other elements */
+    }
 
-/* Modal content area */
-.modal-content {
-  position: relative;
-  width: 80%; /* Adjust width to be more responsive */
-  max-width: 800px; /* Max width to ensure it doesn't get too large */
-  background: #fff;
-  border-radius: 0px;
-  overflow: hidden; /* Remove white space on the edges */
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
+    /* Modal content area */
+    .modal-content {
+      position: relative;
+      width: 80%; /* Adjust width to be more responsive */
+      max-width: 800px; /* Max width to ensure it doesn't get too large */
+      background: #fff;
+      border-radius: 0px;
+      overflow: hidden; /* Remove white space on the edges */
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
 
-/* Image within modal */
-.modal img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block; /* Ensure no white space on the edges */
-  max-height: 60%; /* Limit the height to 60% of the modal */
-}
+    /* Image within modal */
+    .modal img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block; /* Ensure no white space on the edges */
+      max-height: 60%; /* Limit the height to 60% of the modal */
+    }
 
-/* Content in modal */
-#modal-text {
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box; /* Ensure no overflow */
-  overflow-y: auto; /* Enable vertical scrolling if needed */
-  flex-grow: 1; /* Allow the text to take up remaining space */
-}
+    /* Content in modal */
+    #modal-text {
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box; /* Ensure no overflow */
+      overflow-y: auto; /* Enable vertical scrolling if needed */
+      flex-grow: 1; /* Allow the text to take up remaining space */
+    }
 
-/* Close button styles */
-.modal .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  color: #000;
-  cursor: pointer;
-}
+    /* Close button styles */
+    .modal .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+      color: #000;
+      cursor: pointer;
+    }
 
-/* Navigation arrow styles */
-.modal .nav-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
-  z-index: 10001; /* Ensure arrows are above modal content */
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 50%;
-  user-select: none; /* Prevent text selection */
-}
+    /* Navigation arrow styles */
+    .modal .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 10001; /* Ensure arrows are above modal content */
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 50%;
+      user-select: none; /* Prevent text selection */
+    }
 
-/* Position for left arrow */
-.modal .nav-arrow.left {
-  left: 20px; /* Adjust to move the arrow closer to the content */
-}
+    /* Position for left arrow */
+    .modal .nav-arrow.left {
+      left: 20px; /* Adjust to move the arrow closer to the content */
+    }
 
-/* Position for right arrow */
-.modal .nav-arrow.right {
-  right: 20px; /* Adjust to move the arrow closer to the content */
-}
+    /* Position for right arrow */
+    .modal .nav-arrow.right {
+      right: 20px; /* Adjust to move the arrow closer to the content */
+    }
 
-/* Prevent background scrolling when modal is open */
-body.modal-open {
-  overflow: hidden;
-}
+    /* Prevent background scrolling when modal is open */
+    body.modal-open {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <section id="news-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Latest News</h2>
+      </div>
 
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="news-flters">
+            <!-- Filter options for news categories -->
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-event">Events</li>
+            <li data-filter=".filter-talk">Talks</li>
+            <li data-filter=".filter-experiment">Experiments</li>
+          </ul>
+        </div>
+      </div>
 
-</style>
-
-
-<section id="news-section">
-  <div class="container">
-    <div class="section-title">
-      <h2>Latest News</h2>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-12 d-flex justify-content-center">
-        <ul id="news-flters">
-          <!-- Filter options for news categories -->
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-event">Events</li>
-          <li data-filter=".filter-talk">Talks</li>
-          <li data-filter=".filter-experiment">Experiments</li>
-        </ul>
+      <div class="news-container">
+        <!-- Sort and display posts by date in descending order -->
+        {{ range where (sort .Site.RegularPages "Date" "desc") "Type" "post" }}
+          <div class="news-item {{ range .Params.tags }}filter-{{ . }} {{ end }}">
+            <!-- Feature image of the news post -->
+            <img src="{{ .Params.featureimage | relURL }}" alt="{{ .Title }}">
+            <!-- Title overlay -->
+            <div class="news-title-overlay">{{ .Title }}</div>
+            <!-- Hidden content of the news post for modal display -->
+            <div class="news-content" style="display: none;">
+              {{ .Content }}
+            </div>
+          </div>
+        {{ end }}
       </div>
     </div>
+  </section>
 
-    <div class="news-container">
-      <!-- Sort and display posts by date in descending order -->
-      {{ range where (sort .Site.RegularPages "Date" "desc") "Type" "post" }}
-        <div class="news-item {{ range .Params.tags }}filter-{{ . }} {{ end }}">
-          <!-- Feature image of the news post -->
-          <img src="{{ .Params.featureimage | relURL }}" alt="{{ .Title }}">
-          <!-- Title overlay -->
-          <div class="news-title-overlay">{{ .Title }}</div>
-          <!-- Hidden content of the news post for modal display -->
-          <div class="news-content" style="display: none;">
-            {{ .Content }}
-          </div>
-        </div>
-      {{ end }}
+  <!-- Modal (Popup) for displaying the enlarged image and content -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <span class="nav-arrow left">&#9664;</span> <!-- Left arrow -->
+    <span class="nav-arrow right">&#9654;</span> <!-- Right arrow -->
+    <div class="modal-content">
+      <img id="modal-img" src="" alt="Enlarged Image">
+      <div id="modal-text"></div> <!-- Content will be injected here -->
     </div>
   </div>
-</section>
 
-<!-- Modal (Popup) for displaying the enlarged image and content -->
-<div id="modal" class="modal">
-  <span class="close">&times;</span>
-  <span class="nav-arrow left">&#9664;</span> <!-- Left arrow -->
-  <span class="nav-arrow right">&#9654;</span> <!-- Right arrow -->
-  <div class="modal-content">
-    <img id="modal-img" src="" alt="Enlarged Image">
-    <div id="modal-text"></div> <!-- Content will be injected here -->
-  </div>
-</div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filters = document.querySelectorAll('#news-flters li');
+      const items = document.querySelectorAll('.news-item');
 
+      // Initially show all items
+      items.forEach(item => item.style.display = 'block');
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const filters = document.querySelectorAll('#news-flters li');
-  const items = document.querySelectorAll('.news-item');
+      filters.forEach(filter => {
+        filter.addEventListener('click', function() {
+          // Get the filter class from the clicked filter
+          const filterClass = this.getAttribute('data-filter');
 
-  // Initially show all items
-  items.forEach(item => item.style.display = 'block');
+          // Remove active class from all filters
+          filters.forEach(f => f.classList.remove('filter-active'));
+          // Add active class to the clicked filter
+          this.classList.add('filter-active');
 
-  filters.forEach(filter => {
-    filter.addEventListener('click', function() {
-      // Get the filter class from the clicked filter
-      const filterClass = this.getAttribute('data-filter');
+          // Show or hide items based on filter
+          items.forEach(item => {
+            if (filterClass === '*' || item.classList.contains(filterClass.substring(1))) {
+              item.style.display = 'block'; // Show item
+            } else {
+              item.style.display = 'none'; // Hide item
+            }
+          });
+        });
+      });
 
-      // Remove active class from all filters
-      filters.forEach(f => f.classList.remove('filter-active'));
-      // Add active class to the clicked filter
-      this.classList.add('filter-active');
+      // Code for modal (unchanged)
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modal-img');
+      const modalText = document.getElementById('modal-text');
+      const close = document.querySelector('.modal .close');
+      const prevArrow = document.querySelector('.nav-arrow.left');
+      const nextArrow = document.querySelector('.nav-arrow.right');
 
-      // Show or hide items based on filter
-      items.forEach(item => {
-        if (filterClass === '*' || item.classList.contains(filterClass.substring(1))) {
-          item.style.display = 'block'; // Show item
-        } else {
-          item.style.display = 'none'; // Hide item
+      let currentIndex = -1;
+
+      function openModal(index) {
+        if (index < 0 || index >= items.length) return; // Out of bounds check
+        const item = items[index];
+        const imgSrc = item.querySelector('img').src;
+        const content = item.querySelector('.news-content').innerHTML;
+
+        modalImg.src = imgSrc;
+        modalText.innerHTML = content;
+        modal.style.display = 'flex';
+        document.body.classList.add('modal-open');
+        currentIndex = index;
+      }
+
+      function closeModal() {
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+      }
+
+      function showPrev() {
+        if (currentIndex > 0) {
+          openModal(currentIndex - 1);
+        }
+      }
+
+      function showNext() {
+        if (currentIndex < items.length - 1) {
+          openModal(currentIndex + 1);
+        }
+      }
+
+      items.forEach((item, index) => {
+        item.addEventListener('click', function() {
+          openModal(index);
+        });
+      });
+
+      close.addEventListener('click', closeModal);
+
+      window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+          closeModal();
         }
       });
+
+      if (prevArrow && nextArrow) {
+        prevArrow.addEventListener('click', showPrev);
+        nextArrow.addEventListener('click', showNext);
+      }
     });
-  });
-
-  // Code for modal (unchanged)
-  const modal = document.getElementById('modal');
-  const modalImg = document.getElementById('modal-img');
-  const modalText = document.getElementById('modal-text');
-  const close = document.querySelector('.modal .close');
-  const prevArrow = document.querySelector('.nav-arrow.left');
-  const nextArrow = document.querySelector('.nav-arrow.right');
-
-  let currentIndex = -1;
-
-  function openModal(index) {
-    if (index < 0 || index >= items.length) return; // Out of bounds check
-    const item = items[index];
-    const imgSrc = item.querySelector('img').src;
-    const content = item.querySelector('.news-content').innerHTML;
-
-    modalImg.src = imgSrc;
-    modalText.innerHTML = content;
-    modal.style.display = 'flex';
-    document.body.classList.add('modal-open');
-    currentIndex = index;
-  }
-
-  function closeModal() {
-    modal.style.display = 'none';
-    document.body.classList.remove('modal-open');
-  }
-
-  function showPrev() {
-    if (currentIndex > 0) {
-      openModal(currentIndex - 1);
-    }
-  }
-
-  function showNext() {
-    if (currentIndex < items.length - 1) {
-      openModal(currentIndex + 1);
-    }
-  }
-
-  items.forEach((item, index) => {
-    item.addEventListener('click', function() {
-      openModal(index);
-    });
-  });
-
-  close.addEventListener('click', closeModal);
-
-  window.addEventListener('click', function(event) {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-
-  if (prevArrow && nextArrow) {
-    prevArrow.addEventListener('click', showPrev);
-    nextArrow.addEventListener('click', showNext);
-  }
-});
-
-
-
-</script>
+  </script>
+</body>
+</html>
