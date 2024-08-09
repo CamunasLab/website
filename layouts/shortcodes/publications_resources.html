@@ -1,27 +1,30 @@
 <style>
 .custom-box {
-  display: flex; /* Ensure the items are displayed in a row */
-  flex-wrap: wrap; /* Allow wrapping of items if there's not enough space */
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items */
   margin: 20px 0;
+  gap: 20px; /* Space between items */
 }
 
+/* Styles for each item within the custom box */
 .custom-box > div {
-  flex: 0 0 30%; /* Allow each item to take up 30% of the container width */
-  max-width: 30%; /* Limit the maximum width of each item */
+  flex: 1 1 calc(30% - 20px); /* Adjust for spacing */
+  max-width: calc(30% - 20px); /* Ensure item width with margin */
   text-align: center;
-  margin: 10px 1.66%; /* Add margin for spacing between items */
   background: #7d4ba9;
   padding: 20px;
   border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Include background-color in transition */
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
+/* Hover effect */
 .custom-box > div:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 8px rgba(0,0,0,0.2);
-  background-color: #8c83e2bd; /* Change the background color of the box on hover */
+  background-color: #8c83e2bd;
 }
 
+/* Icon styling */
 .custom-box .icon {
   margin-bottom: 10px;
 }
@@ -29,28 +32,29 @@
 .custom-box .icon img {
   width: 70px;
   height: 70px;
-  padding: 10px; /* Add padding for the blue square */
-  border: 2px solid #f8f9fa; /* Border for the square */
-  border-radius: 10px; /* Rounded corners for the square */
-  background-color: #f8f9fa; /* Background color for the icon */
-  margin: 0 auto; /* Center the icon */
-  max-width: fit-content; /* Fit the width to the content */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px;
+  border: 2px solid #f8f9fa;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
+/* Link styling */
 .custom-box a {
   text-decoration: none;
   color: inherit;
-  display: block; /* Make the link block level to center it */
-  transition: color 0.3s; /* Smooth transition for text color */
+  display: block;
+  transition: color 0.3s;
 }
 
 .custom-box a:hover {
-  color: inherit; /* Ensure the link color does not change on hover */
+  color: inherit;
 }
 
+/* Heading and paragraph styling */
 .custom-box h3, .custom-box p {
-  margin: 0; /* Remove default margin for better alignment */
+  margin: 0;
 }
 
 /* Media Queries for Responsiveness */
@@ -58,27 +62,26 @@
 /* Small screens (phones, 600px and down) */
 @media (max-width: 600px) {
   .custom-box > div {
-    flex: 0 0 100%; /* Each item takes full width */
-    max-width: 100%; /* Max width is full width */
+    flex: 1 1 100%; /* Full width */
+    max-width: 100%; /* Full width */
   }
 }
 
 /* Medium screens (tablets, 600px and up) */
 @media (min-width: 601px) and (max-width: 900px) {
   .custom-box > div {
-    flex: 0 0 48%; /* Two items per row */
-    max-width: 48%; /* Limit the maximum width to 48% */
+    flex: 1 1 calc(48% - 20px); /* Two items per row */
+    max-width: calc(48% - 20px); /* Two items per row */
   }
 }
 
 /* Large screens (desktops, 900px and up) */
 @media (min-width: 901px) {
   .custom-box > div {
-    flex: 0 0 30%; /* Three items per row */
-    max-width: 30%; /* Limit the maximum width to 30% */
+    flex: 1 1 calc(30% - 20px); /* Three items per row */
+    max-width: calc(30% - 20px); /* Three items per row */
   }
 }
-
 
 </style>
 
