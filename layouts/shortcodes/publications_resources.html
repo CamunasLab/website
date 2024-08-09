@@ -8,7 +8,7 @@
 
 /* Styles for each item within the custom box */
 .custom-box > div {
-  flex: 1 1 calc(30% - 20px); /* Adjust for spacing */
+  flex: 1 1 calc(30% - 20px); /* Three items per row with margin adjustment */
   max-width: calc(30% - 20px); /* Ensure item width with margin */
   text-align: center;
   background: #7d4ba9;
@@ -67,7 +67,7 @@
   }
 }
 
-/* Medium screens (tablets, 600px and up) */
+/* Medium screens (tablets, 601px to 900px) */
 @media (min-width: 601px) and (max-width: 900px) {
   .custom-box > div {
     flex: 1 1 calc(48% - 20px); /* Two items per row */
@@ -75,14 +75,14 @@
   }
 }
 
-/* Large screens (desktops, 900px and up) */
+/* Large screens (desktops, 901px and up) */
 @media (min-width: 901px) {
   .custom-box > div {
     flex: 1 1 calc(30% - 20px); /* Three items per row */
     max-width: calc(30% - 20px); /* Three items per row */
   }
 }
- 
+
 </style>
 
 <div class="custom-box">
