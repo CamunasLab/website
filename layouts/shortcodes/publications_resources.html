@@ -53,6 +53,32 @@
   margin: 0; /* Remove default margin for better alignment */
 }
 
+/* Media Queries for Responsiveness */
+
+/* Small screens (phones, 600px and down) */
+@media (max-width: 600px) {
+  .custom-box > div {
+    flex: 0 0 100%; /* Each item takes full width */
+    max-width: 100%; /* Max width is full width */
+  }
+}
+
+/* Medium screens (tablets, 600px and up) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .custom-box > div {
+    flex: 0 0 48%; /* Two items per row */
+    max-width: 48%; /* Limit the maximum width to 48% */
+  }
+}
+
+/* Large screens (desktops, 900px and up) */
+@media (min-width: 901px) {
+  .custom-box > div {
+    flex: 0 0 30%; /* Three items per row */
+    max-width: 30%; /* Limit the maximum width to 30% */
+  }
+}
+
 
 </style>
 
