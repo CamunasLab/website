@@ -66,16 +66,40 @@ sections:
       text: |
         We are an interdisciplinary research group at the interface of genomics, biophysics, and precision medicine. Our mission is to develop new genomic technologies to map and model cellular dysfunction in human disease.
         
-        [Read more about our research](../about/) <!-- Link to the About page -->
-      link:
-        icon: info-circle
-        icon_pack: fas
-        text: Learn More
-        url: ../about/ <!-- Ensure this path matches the actual URL of your About page -->
+    
+        
+        <a href="../about/" style="
+          display: inline-flex;
+          align-items: center;
+          color: rgba(0, 0, 0, 0.8); /* Ensure text color contrasts with background */
+          text-decoration: none; /* Remove underline */
+          padding: 0px 15px;
+          background-color: rgba(150, 200, 255, 0.5); /* Adjusted to make the link stand out */
+          border-radius: 5px;
+          transition: background-color 0.3s;
+          font-size: 1rem;
+          gap: 28px; /* Space between text and icon */
+        ">
+          Read more about our research
+          <i class="fas fa-arrow-right" style="
+            color: #4A90E2; /* Icon color */
+            font-size: 1.2rem;
+          "></i>
+        </a>
+    link:
+      icon: info-circle
+      icon_pack: fas
+      text: Learn More
+      url: ../about/ <!-- Ensure this path matches the actual URL of your About page -->
 
     design:
       slide_height: ''
       is_fullscreen: true
+
+
+
+
+
 
   # News Section
   - block: markdown
