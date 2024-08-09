@@ -1,0 +1,29 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+    <style>
+        /* Custom styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="publication-header">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Description }}</p>
+        </header>
+        <main>
+            <!-- Include the HTML content from publications.html here -->
+            {{ .Content }}
+        </main>
+        <footer>
+            <!-- Include your site's footer here -->
+        </footer>
+    </div>
+</body>
+</html>
+{{ end }}

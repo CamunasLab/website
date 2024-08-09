@@ -16,4 +16,26 @@
     </div>
   {{ end }}
 </div>
+
+<div class="publication-list">
+  {{ $publications := .Site.Data.publications }}
+  {{ if $publications }}
+    {{ range $publications }}
+      <div class="publication">
+        <h2>{{ .title }}</h2>
+        <p>Authors: 
+          {{ with .author }}
+            {{ range . }}
+              {{ . }}{{ if not (eq . (index $.author (sub (len $.author) 1))) }}, {{ end }}
+            {{ end }}
+          {{ end }}
+        </p>
+        <p>Published in: {{ .booktitle }}, {{ .year }}</p>
+      </div>
+    {{ end }}
+  {{ else }}
+    <p>No publications found.</p>
+  {{ end }}
+</div>
+
 {{ end }}
