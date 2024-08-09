@@ -57,17 +57,25 @@ sections:
       # Duration of transition between slides (in ms)
       interval: 1500
 
-  # About Section
-  - block: markdown
-    id: about-section
-    title: About Us
   - block: hero
+    id: about-section
     content:
       title: About Us
       image:
-        filename: team.jpg  
+        filename: team.jpg
       text: |
         We are an interdisciplinary research group at the interface of genomics, biophysics, and precision medicine. Our mission is to develop new genomic technologies to map and model cellular dysfunction in human disease.
+        
+        [Read more about our research](../about/) <!-- Link to the About page -->
+      link:
+        icon: info-circle
+        icon_pack: fas
+        text: Learn More
+        url: ../about/ <!-- Ensure this path matches the actual URL of your About page -->
+
+    design:
+      slide_height: ''
+      is_fullscreen: true
 
   # News Section
   - block: markdown

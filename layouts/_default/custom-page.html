@@ -1,0 +1,96 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}"> <!-- Link to your main stylesheet -->
+    <style>
+        .section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .hero {
+            background: url('{{ .Params.heroImage }}') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .markdown-section, .people-section, .news-section, .alumni-section, .publications-section {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {{ with .Params.aboutSection }}
+        <div class="section hero">
+            <h1>{{ .title }}</h1>
+            <p>{{ .text }}</p>
+        </div>
+        {{ end }}
+
+        {{ with .Params.newsSection }}
+        <div class="section news-section">
+            <h2>{{ .title }}</h2>
+            <h3>{{ .subtitle }}</h3>
+            <div>{{ .text }}</div>
+        </div>
+        {{ end }}
+
+        {{ with .Params.peopleSection }}
+        <div class="section people-section">
+            <h2>{{ .title }}</h2>
+            <!-- Include code to render people -->
+        </div>
+        {{ end }}
+
+        {{ with .Params.alumniSection }}
+        <div class="section alumni-section">
+            <h2>{{ .subtitle }}</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position in the lab</th>
+                        <th>Years</th>
+                        <th>Next Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range .text }}
+                    <tr>
+                        <td>{{ .Name }}</td>
+                        <td>{{ .Position }}</td>
+                        <td>{{ .Years }}</td>
+                        <td>{{ .NextPosition }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+        {{ end }}
+
+        {{ with .Params.publicationsSection }}
+        <div class="section publications-section">
+            <h2>{{ .title }}</h2>
+            <div>{{ .text }}</div>
+        </div>
+        {{ end }}
+
+        <footer>
+            <!-- Include your site's footer here -->
+        </footer>
+    </div>
+</body>
+</html>
+{{ end }}
