@@ -68,4 +68,8 @@ user_groups:
   - Members
 ---
 
-Mercedes Dalman is a PhD student in the lab since 2023.
+Mercedes Dalman is a PhD student in the Joan Camuñas-Soler Group since 2023, specializing in the application of advanced computational techniques to Spatial Transcriptomics. Her work is driven by a passion for harnessing computational tools to unravel complex biological questions.
+
+Mercedes's academic journey has been guided by a lifelong interest in both Biology and Mathematics, which has shaped her educational and professional choices. Her MSc in Engineering Mathematics and Computational Science from Chalmers University of Technology provided her with a strong foundation in bioinformatics, machine learning, and programming. Additionally, her BSc in Biotechnology solidified her ability to bridge the gap between experimental biology and data-driven insights.
+
+Mercedes is committed to research that has the potential to make a lasting impact. To achieve this, she is eager to further explore the application of cutting-edge computational techniques in bioinformatics and beyond.

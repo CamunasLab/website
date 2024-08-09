@@ -27,7 +27,7 @@ sections:
         align: left
         background:
           image:
-            filename: cellpick.jpg
+            filename: on_chip.jpg
             filters:
               brightness: 0.7
           position: center
@@ -118,6 +118,7 @@ sections:
     id: people-section
     content:
       title: Meet the Team
+    
       # Choose which groups/teams of users to display.
       # Edit `user_groups` in each user's profile to add them to one or more of these groups.
       user_groups:
