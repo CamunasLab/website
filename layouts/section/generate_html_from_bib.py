@@ -92,8 +92,6 @@ def generate_html_from_bib(bib_file, html_file):
     except Exception as e:
         print(f"Error writing {html_file}: {e}")
 
-# Example usage
-generate_html_from_bib('your_bib_file.bib', 'output.html')
 
 
 def update_publications_page_layout(publications_file, layout_file, output_file):
