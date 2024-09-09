@@ -1,10 +1,9 @@
 ---
 # Leave the homepage title empty to use the site title
+# Leave the homepage title empty to use the site title
 title:
 date: 2024-08-04
 type: landing
-
-# Example configuration snippet with inline styles for responsiveness
 
 sections:
   # Home
@@ -14,7 +13,7 @@ sections:
     content:
       slides:
       - title: Investigating cellular heterogeneity in human tissue
-        content:
+        content: # Content can be added here if needed
         align: center
         background:
           image:
@@ -26,14 +25,19 @@ sections:
         style: |
           @media (max-width: 768px) {
             .slider-title {
-              font-size: 1.5rem;
+              font-size: 1.5rem; /* Smaller font size for smaller screens */
+              padding: 10px; /* Add padding to avoid cutting off */
+              text-align: center; /* Center align text */
             }
             .slider-content {
-              font-size: 1rem;
+              font-size: 1rem; /* Smaller font size for smaller screens */
+              padding: 10px; /* Add padding to avoid cutting off */
+              text-align: center; /* Center align text */
             }
           }
+
       - title: Developing biophysical tools to study cell function
-        content:
+        content: # Content can be added here if needed
         align: left
         background:
           image:
@@ -45,14 +49,19 @@ sections:
         style: |
           @media (max-width: 768px) {
             .slider-title {
-              font-size: 1.5rem;
+              font-size: 1.5rem; /* Smaller font size for smaller screens */
+              padding: 10px; /* Add padding to avoid cutting off */
+              text-align: left; /* Align text to the left */
             }
             .slider-content {
-              font-size: 1rem;
+              font-size: 1rem; /* Smaller font size for smaller screens */
+              padding: 10px; /* Add padding to avoid cutting off */
+              text-align: left; /* Align text to the left */
             }
           }
+
       - title: Precision medicine tools to improve human health
-        content:
+        content: # Content can be added here if needed
         align: right
         background:
           image:
@@ -69,21 +78,23 @@ sections:
         style: |
           @media (max-width: 768px) {
             .slider-title {
-              font-size: 1.5rem;
+              font-size: 1.5rem; /* Smaller font size for smaller screens */
+              padding: 10px; /* Add padding to avoid cutting off */
+              text-align: right; /* Align text to the right */
             }
             .slider-content {
-              font-size: 1rem;
+              font-size: 1rem; /* Smaller font size for smaller screens */
+              padding: 10px; /* Add padding to avoid cutting off */
+              text-align: right; /* Align text to the right */
             }
           }
 
     design:
-      # Slide height is automatic unless you force a specific height (e.g. '400px')
-      slide_height: ''
-      is_fullscreen: true # Whether the slider should be fullscreen
-      # Automatically transition through slides?
+      slide_height: '' # Height can be adjusted as needed
+      is_fullscreen: true # Fullscreen might be good for larger screens
       loop: false
-      # Duration of transition between slides (in ms)
       interval: 1500
+
 
 
 
