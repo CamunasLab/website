@@ -13,7 +13,7 @@ sections:
 
     content:
       slides:
-      - title: Investigating cellular heterogeneity in human tissue
+      - title:  Studying cell diversity in human tissue #Investigating cellular heterogeneity in human tissue
         content:
         align: center
         background:
@@ -33,12 +33,12 @@ sections:
               .slider-content {
                 font-size: 0.9rem; /* Smaller font size for smaller screens */
                 line-height: 1.4; /* Adjust line height for better text fit */
-                padding: 0 10px; /* Padding to prevent text from touching edges */
+                padding: 0 5px; /* Reduced padding to fit text in smaller space */
               }
             }
           </style>
 
-      - title: Developing biophysical tools to study cell function
+      - title: New tools to study cell function #Developing biophysical tools to study cell function
         content:
         align: left
         background:
@@ -58,12 +58,12 @@ sections:
               .slider-content {
                 font-size: 0.9rem; /* Smaller font size for smaller screens */
                 line-height: 1.4; /* Adjust line height for better text fit */
-                padding: 0 10px; /* Padding to prevent text from touching edges */
+                padding: 0 5px; /* Reduced padding to fit text in smaller space */
               }
             }
           </style>
 
-      - title: Precision medicine tools to improve human health
+      - title: New tools to study cell function #Precision medicine tools to improve human health
         content:
         align: right
         background:
@@ -88,7 +88,7 @@ sections:
               .slider-content {
                 font-size: 0.9rem; /* Smaller font size for smaller screens */
                 line-height: 1.4; /* Adjust line height for better text fit */
-                padding: 0 10px; /* Padding to prevent text from touching edges */
+                padding: 0 5px; /* Reduced padding to fit text in smaller space */
               }
             }
           </style>
@@ -98,6 +98,7 @@ sections:
       is_fullscreen: true
       loop: false
       interval: 1500
+
 
 
 
