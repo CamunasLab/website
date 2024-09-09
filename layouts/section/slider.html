@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="{{ "css/slider.css" | relURL }}"> <!-- Link to your custom slider stylesheet -->
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}"> <!-- Link to your main stylesheet -->
+</head>
+<body>
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+    <main>
+        <section id="home-section" class="slider">
+            {{ .Content }}
+        </section>
+    </main>
+    <footer>
+        <!-- Include your site's footer here -->
+    </footer>
+</body>
+</html>
