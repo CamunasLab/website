@@ -49,7 +49,7 @@ sections:
           url: ../contact/
 
     design:
-      slide_height: '300px' # Set a fixed height for better mobile display
+      slide_height: '50vh' # Set a fixed height for better mobile display
       is_fullscreen: false # Disable fullscreen for mobile
       loop: false
       interval: 1500
