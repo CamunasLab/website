@@ -61,7 +61,7 @@ sections:
             }
           </style>
 
-      - title: Precise medicine tools to improve human health #Making new tools to study cell function #Precision medicine tools to improve human health
+      - title: Precise medical tools to improve human health #Making new tools to study cell function #Precision medicine tools to improve human health
         content:
         align: right
         background:
