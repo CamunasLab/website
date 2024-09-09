@@ -36,7 +36,7 @@ sections:
               }
             </style>
 
-      - title: Making new tools to study cell function #Developing biophysical tools to study cell function
+      - title: New tools to study cell function #Developing biophysical tools to study cell function
         content:
         align: left
         background:
@@ -61,9 +61,9 @@ sections:
             }
           </style>
 
-      - title: Precision medicine tools to improve human health #Making new tools to study cell function #Precision medicine tools to improve human health
+      - title: Precision medicin tools to improve human health #Making new tools to study cell function #Precision medicine tools to improve human health
         content:
-        align: left
+        align: right
         background:
           image:
             filename: team.jpg
