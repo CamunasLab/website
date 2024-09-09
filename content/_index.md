@@ -7,97 +7,85 @@ date: 2024-08-04
 type: landing
 
 sections:
-  # Home
-  - block: slider
-    id: home-section
+# Home
+- block: slider
+  id: home-section
 
-    content:
-      slides:
-      - title:  Study cell diversity in human tissue #Investigating cellular heterogeneity in human tissue
-        content:
-        align: center
-        background:
-          image:
-            filename: islets.jpg
-            filters:
-              brightness: 0.7
-          position: center
-          color: '#666'
-        style: |
-          <style>
-            @media (max-width: 768px) {
-              .slider-title {
-                font-size: 0.5rem; /* Smaller font size for smaller screens */
-                line-height: 1.3; /* Adjust line height for better text fit */
-              }
-              .slider-content {
-                font-size: 0.5rem; /* Smaller font size for smaller screens */
-                line-height: 1.4; /* Adjust line height for better text fit */
-                padding: 0 5px; /* Reduced padding to fit text in smaller space */
-              }
-            }
-          </style>
+  content:
+    slides:
+    - title: Investigating cellular heterogeneity in human tissue
+      content: # Add additional text content here if needed
+      align: center # Alignment of the slide content
+      background:
+        image:
+          filename: islets.jpg # Background image for the slide
+          filters:
+            brightness: 0.7 # Adjust brightness of the background image
+        position: right # Position of the background image
+        color: '#666' # Overlay color on the image
+      style: |
+        <style>
+          .slider-title {
+            font-size: 1.5rem; /* Smaller font size for titles */
+          }
+          .slider-content {
+            font-size: 1rem; /* Smaller font size for content */
+          }
+        </style>
 
-      - title: New tools to study cell function #Developing biophysical tools to study cell function
-        content:
-        align: left
-        background:
-          image:
-            filename: on_chip.jpg
-            filters:
-              brightness: 0.7
-          position: center
-          color: '#555'
-        style: |
-          <style>
-            @media (max-width: 768px) {
-              .slider-title {
-                font-size: 0.5rem; /* Smaller font size for smaller screens */
-                line-height: 1.3; /* Adjust line height for better text fit */
-              }
-              .slider-content {
-                font-size: 0.5rem; /* Smaller font size for smaller screens */
-                line-height: 1.4; /* Adjust line height for better text fit */
-                padding: 0 5px; /* Reduced padding to fit text in smaller space */
-              }
-            }
-          </style>
+    - title: Developing biophysical tools to study cell function
+      content: # Add additional text content here if needed
+      align: center
+      background:
+        image:
+          filename: on_chip.jpg
+          filters:
+            brightness: 0.7
+        position: center
+        color: '#555'
+      style: |
+        <style>
+          .slider-title {
+            font-size: 1.5rem; /* Smaller font size for titles */
+          }
+          .slider-content {
+            font-size: 1rem; /* Smaller font size for content */
+          }
+        </style>
 
-      - title: New tools to study cell function #Precision medicine tools to improve human health
-        content:
-        align: right
-        background:
-          image:
-            filename: team.jpg
-            filters:
-              brightness: 0.5
-          position: center
-          color: '#333'
-        link:
-          icon: graduation-cap
-          icon_pack: fas
-          text: Join Us
-          url: ../contact/
-        style: |
-          <style>
-            @media (max-width: 768px) {
-              .slider-title {
-                font-size: 0.5rem; /* Smaller font size for smaller screens */
-                line-height: 1.3; /* Adjust line height for better text fit */
-              }
-              .slider-content {
-                font-size: 0.5rem; /* Smaller font size for smaller screens */
-                line-height: 1.4; /* Adjust line height for better text fit */
-                padding: 0 5px; /* Reduced padding to fit text in smaller space */
-              }
-            }
-          </style>
+    - title: Precision medicine tools to improve human health
+      content: # Add additional text content here if needed
+      align: right
+      background:
+        image:
+          filename: team.jpg
+          filters:
+            brightness: 0.5
+        position: center
+        color: '#333'
+      link:
+        icon: graduation-cap # Icon to display on the link
+        icon_pack: fas # Icon pack to use
+        text: Join Us # Text for the link
+        url: ../contact/ # URL the link points to
+      style: |
+        <style>
+          .slider-title {
+            font-size: 1.5rem; /* Smaller font size for titles */
+          }
+          .slider-content {
+            font-size: 1rem; /* Smaller font size for content */
+          }
+        </style>
 
-    design:
-      slide_height: '' 
-      is_fullscreen: true
-      loop: false
-      interval: 1500
+  design:
+    # Slide height is automatic unless you force a specific height (e.g. '400px')
+    slide_height: ''
+    is_fullscreen: true # Whether the slider should be fullscreen
+    # Automatically transition through slides?
+    loop: false
+    # Duration of transition between slides (in ms)
+    interval: 1500
 
 
 
@@ -107,7 +95,8 @@ sections:
 
 
 
-# sections:
+
+# # sections:
 #   # Home
 #   - block: slider
 #     id: home-section
@@ -115,8 +104,8 @@ sections:
 #     content:
 #       slides:
 #       # Each slide represents a section in the slider
-#       - title: Investigating cellular heterogeneity in human tissue
-#         content: # Add additional text content here if needed
+#       - title: 
+#         content: Investigating cellular heterogeneity in human tissue # Add additional text content here if needed
 #         align: center # Alignment of the slide content
 #         background:
 #           image:
@@ -125,9 +114,9 @@ sections:
 #               brightness: 0.7 # Adjust brightness of the background image
 #           position: right # Position of the background image
 #           color: '#666' # Overlay color on the image
-#       - title: Developing biophysical tools to study cell function
-#         content: # Add additional text content here if needed
-#         align: left
+#       - title: 
+#         content: Developing biophysical tools to study cell function# Add additional text content here if needed
+#         align: center
 #         background:
 #           image:
 #             filename: on_chip.jpg
@@ -135,8 +124,8 @@ sections:
 #               brightness: 0.7
 #           position: center
 #           color: '#555'
-#       - title: Precision medicine tools to improve human health
-#         content: # Add additional text content here if needed
+#       - title: #Precision medicine tools to improve human health
+#         content: Precision medicine tools to improve human health #Developing biophysical tools to study cell function# Add additional text content here if needed
 #         align: right
 #         background:
 #           image:
