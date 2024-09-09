@@ -2,6 +2,7 @@
 # Leave the homepage title empty to use the site title
 # Leave the homepage title empty to use the site title
 # Leave the homepage title empty to use the site title
+# Leave the homepage title empty to use the site title
 title:
 date: 2024-08-04
 type: landing
@@ -24,17 +25,19 @@ sections:
           position: center
           color: '#666'
         style: |
-          @media (max-width: 768px) {
-            .slider-title {
-              font-size: 1.5rem; /* Adjust font size for smaller screens */
-              line-height: 1.2; /* Ensure line height is adjusted to fit text */
+          <style>
+            @media (max-width: 768px) {
+              .slider-title {
+                font-size: 1.5rem; /* Adjust font size for smaller screens */
+                line-height: 1.2; /* Ensure line height is adjusted to fit text */
+              }
+              .slider-content {
+                font-size: 1rem; /* Adjust font size for smaller screens */
+                line-height: 1.4; /* Ensure line height is adjusted to fit text */
+                padding: 0 10px; /* Add padding to prevent text from touching the edges */
+              }
             }
-            .slider-content {
-              font-size: 1rem; /* Adjust font size for smaller screens */
-              line-height: 1.4; /* Ensure line height is adjusted to fit text */
-              padding: 0 10px; /* Add padding to prevent text from touching the edges */
-            }
-          }
+          </style>
 
       - title: Developing biophysical tools to study cell function
         content:
@@ -47,17 +50,19 @@ sections:
           position: center
           color: '#555'
         style: |
-          @media (max-width: 768px) {
-            .slider-title {
-              font-size: 1.5rem; /* Adjust font size for smaller screens */
-              line-height: 1.2; /* Ensure line height is adjusted to fit text */
+          <style>
+            @media (max-width: 768px) {
+              .slider-title {
+                font-size: 1.5rem; /* Adjust font size for smaller screens */
+                line-height: 1.2; /* Ensure line height is adjusted to fit text */
+              }
+              .slider-content {
+                font-size: 1rem; /* Adjust font size for smaller screens */
+                line-height: 1.4; /* Ensure line height is adjusted to fit text */
+                padding: 0 10px; /* Add padding to prevent text from touching the edges */
+              }
             }
-            .slider-content {
-              font-size: 1rem; /* Adjust font size for smaller screens */
-              line-height: 1.4; /* Ensure line height is adjusted to fit text */
-              padding: 0 10px; /* Add padding to prevent text from touching the edges */
-            }
-          }
+          </style>
 
       - title: Precision medicine tools to improve human health
         content:
@@ -75,26 +80,26 @@ sections:
           text: Join Us
           url: ../contact/
         style: |
-          @media (max-width: 768px) {
-            .slider-title {
-              font-size: 1.5rem; /* Adjust font size for smaller screens */
-              line-height: 1.2; /* Ensure line height is adjusted to fit text */
+          <style>
+            @media (max-width: 768px) {
+              .slider-title {
+                font-size: 1.5rem; /* Adjust font size for smaller screens */
+                line-height: 1.2; /* Ensure line height is adjusted to fit text */
+              }
+              .slider-content {
+                font-size: 1rem; /* Adjust font size for smaller screens */
+                line-height: 1.4; /* Ensure line height is adjusted to fit text */
+                padding: 0 10px; /* Add padding to prevent text from touching the edges */
+              }
             }
-            .slider-content {
-              font-size: 1rem; /* Adjust font size for smaller screens */
-              line-height: 1.4; /* Ensure line height is adjusted to fit text */
-              padding: 0 10px; /* Add padding to prevent text from touching the edges */
-            }
-          }
+          </style>
 
     design:
-      # Slide height is automatic unless you force a specific height (e.g. '400px')
       slide_height: '' 
-      is_fullscreen: true # Whether the slider should be fullscreen
-      # Automatically transition through slides?
+      is_fullscreen: true
       loop: false
-      # Duration of transition between slides (in ms)
       interval: 1500
+
 
 
 
