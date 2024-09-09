@@ -4,6 +4,8 @@ title:
 date: 2024-08-04
 type: landing
 
+# Example configuration snippet with inline styles for responsiveness
+
 sections:
   # Home
   - block: slider
@@ -11,7 +13,6 @@ sections:
 
     content:
       slides:
-      # Each slide represents a section in the slider
       - title: Investigating cellular heterogeneity in human tissue
         content:
         align: center
@@ -22,6 +23,15 @@ sections:
               brightness: 0.7
           position: center
           color: '#666'
+        style: |
+          @media (max-width: 768px) {
+            .slider-title {
+              font-size: 1.5rem;
+            }
+            .slider-content {
+              font-size: 1rem;
+            }
+          }
       - title: Developing biophysical tools to study cell function
         content:
         align: left
@@ -32,6 +42,15 @@ sections:
               brightness: 0.7
           position: center
           color: '#555'
+        style: |
+          @media (max-width: 768px) {
+            .slider-title {
+              font-size: 1.5rem;
+            }
+            .slider-content {
+              font-size: 1rem;
+            }
+          }
       - title: Precision medicine tools to improve human health
         content:
         align: right
@@ -47,12 +66,26 @@ sections:
           icon_pack: fas
           text: Join Us
           url: ../contact/
+        style: |
+          @media (max-width: 768px) {
+            .slider-title {
+              font-size: 1.5rem;
+            }
+            .slider-content {
+              font-size: 1rem;
+            }
+          }
 
     design:
-      slide_height: '50vh' # Set a fixed height for better mobile display
-      is_fullscreen: false # Disable fullscreen for mobile
+      # Slide height is automatic unless you force a specific height (e.g. '400px')
+      slide_height: ''
+      is_fullscreen: true # Whether the slider should be fullscreen
+      # Automatically transition through slides?
       loop: false
+      # Duration of transition between slides (in ms)
       interval: 1500
+
+
 
 
 # sections:
