@@ -63,7 +63,7 @@ sections:
 
       - title: Precision medicine tools to improve human health #Making new tools to study cell function #Precision medicine tools to improve human health
         content:
-        align: right
+        align: left
         background:
           image:
             filename: team.jpg
