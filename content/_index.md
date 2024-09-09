@@ -13,7 +13,7 @@ sections:
 
     content:
       slides:
-      - title:  Studying cell diversity in human tissue #Investigating cellular heterogeneity in human tissue
+      - title:  Study cell diversity in human tissue #Investigating cellular heterogeneity in human tissue
         content:
         align: center
         background:
