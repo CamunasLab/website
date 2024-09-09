@@ -13,17 +13,17 @@ sections:
       slides:
       # Each slide represents a section in the slider
       - title: Investigating cellular heterogeneity in human tissue
-        content: # Add additional text content here if needed
-        align: center # Alignment of the slide content
+        content:
+        align: center
         background:
           image:
-            filename: islets.jpg # Background image for the slide
+            filename: islets.jpg
             filters:
-              brightness: 0.7 # Adjust brightness of the background image
-          position: right # Position of the background image
-          color: '#666' # Overlay color on the image
+              brightness: 0.7
+          position: center
+          color: '#666'
       - title: Developing biophysical tools to study cell function
-        content: # Add additional text content here if needed
+        content:
         align: left
         background:
           image:
@@ -33,7 +33,7 @@ sections:
           position: center
           color: '#555'
       - title: Precision medicine tools to improve human health
-        content: # Add additional text content here if needed
+        content:
         align: right
         background:
           image:
@@ -43,19 +43,70 @@ sections:
           position: center
           color: '#333'
         link:
-          icon: graduation-cap # Icon to display on the link
-          icon_pack: fas # Icon pack to use
-          text: Join Us # Text for the link
-          url: ../contact/ # URL the link points to
+          icon: graduation-cap
+          icon_pack: fas
+          text: Join Us
+          url: ../contact/
 
     design:
-      # Slide height is automatic unless you force a specific height (e.g. '400px')
-      slide_height: ''
-      is_fullscreen: true # Whether the slider should be fullscreen
-      # Automatically transition through slides?
+      slide_height: '300px' # Set a fixed height for better mobile display
+      is_fullscreen: false # Disable fullscreen for mobile
       loop: false
-      # Duration of transition between slides (in ms)
       interval: 1500
+
+
+# sections:
+#   # Home
+#   - block: slider
+#     id: home-section
+
+#     content:
+#       slides:
+#       # Each slide represents a section in the slider
+#       - title: Investigating cellular heterogeneity in human tissue
+#         content: # Add additional text content here if needed
+#         align: center # Alignment of the slide content
+#         background:
+#           image:
+#             filename: islets.jpg # Background image for the slide
+#             filters:
+#               brightness: 0.7 # Adjust brightness of the background image
+#           position: right # Position of the background image
+#           color: '#666' # Overlay color on the image
+#       - title: Developing biophysical tools to study cell function
+#         content: # Add additional text content here if needed
+#         align: left
+#         background:
+#           image:
+#             filename: on_chip.jpg
+#             filters:
+#               brightness: 0.7
+#           position: center
+#           color: '#555'
+#       - title: Precision medicine tools to improve human health
+#         content: # Add additional text content here if needed
+#         align: right
+#         background:
+#           image:
+#             filename: team.jpg
+#             filters:
+#               brightness: 0.5
+#           position: center
+#           color: '#333'
+#         link:
+#           icon: graduation-cap # Icon to display on the link
+#           icon_pack: fas # Icon pack to use
+#           text: Join Us # Text for the link
+#           url: ../contact/ # URL the link points to
+
+#     design:
+#       # Slide height is automatic unless you force a specific height (e.g. '400px')
+#       slide_height: ''
+#       is_fullscreen: true # Whether the slider should be fullscreen
+#       # Automatically transition through slides?
+#       loop: false
+#       # Duration of transition between slides (in ms)
+#       interval: 1500
 
   - block: hero
     id: about-section
