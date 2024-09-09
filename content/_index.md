@@ -1,8 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
-# Leave the homepage title empty to use the site title
-# Leave the homepage title empty to use the site title
-# Leave the homepage title empty to use the site title
+
+
 title:
 date: 2024-08-04
 type: landing
@@ -28,13 +27,13 @@ sections:
           <style>
             @media (max-width: 768px) {
               .slider-title {
-                font-size: 1.5rem; /* Adjust font size for smaller screens */
-                line-height: 1.2; /* Ensure line height is adjusted to fit text */
+                font-size: 1.2rem; /* Smaller font size for smaller screens */
+                line-height: 1.3; /* Adjust line height for better text fit */
               }
               .slider-content {
-                font-size: 1rem; /* Adjust font size for smaller screens */
-                line-height: 1.4; /* Ensure line height is adjusted to fit text */
-                padding: 0 10px; /* Add padding to prevent text from touching the edges */
+                font-size: 0.9rem; /* Smaller font size for smaller screens */
+                line-height: 1.4; /* Adjust line height for better text fit */
+                padding: 0 10px; /* Padding to prevent text from touching edges */
               }
             }
           </style>
@@ -53,13 +52,13 @@ sections:
           <style>
             @media (max-width: 768px) {
               .slider-title {
-                font-size: 1.5rem; /* Adjust font size for smaller screens */
-                line-height: 1.2; /* Ensure line height is adjusted to fit text */
+                font-size: 1.2rem; /* Smaller font size for smaller screens */
+                line-height: 1.3; /* Adjust line height for better text fit */
               }
               .slider-content {
-                font-size: 1rem; /* Adjust font size for smaller screens */
-                line-height: 1.4; /* Ensure line height is adjusted to fit text */
-                padding: 0 10px; /* Add padding to prevent text from touching the edges */
+                font-size: 0.9rem; /* Smaller font size for smaller screens */
+                line-height: 1.4; /* Adjust line height for better text fit */
+                padding: 0 10px; /* Padding to prevent text from touching edges */
               }
             }
           </style>
@@ -83,13 +82,13 @@ sections:
           <style>
             @media (max-width: 768px) {
               .slider-title {
-                font-size: 1.5rem; /* Adjust font size for smaller screens */
-                line-height: 1.2; /* Ensure line height is adjusted to fit text */
+                font-size: 1.2rem; /* Smaller font size for smaller screens */
+                line-height: 1.3; /* Adjust line height for better text fit */
               }
               .slider-content {
-                font-size: 1rem; /* Adjust font size for smaller screens */
-                line-height: 1.4; /* Ensure line height is adjusted to fit text */
-                padding: 0 10px; /* Add padding to prevent text from touching the edges */
+                font-size: 0.9rem; /* Smaller font size for smaller screens */
+                line-height: 1.4; /* Adjust line height for better text fit */
+                padding: 0 10px; /* Padding to prevent text from touching edges */
               }
             }
           </style>
@@ -99,6 +98,7 @@ sections:
       is_fullscreen: true
       loop: false
       interval: 1500
+
 
 
 
