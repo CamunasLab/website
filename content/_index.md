@@ -27,11 +27,11 @@ sections:
           <style>
             @media (max-width: 768px) {
               .slider-title {
-                font-size: 1.2rem; /* Smaller font size for smaller screens */
+                font-size: 0.5rem; /* Smaller font size for smaller screens */
                 line-height: 1.3; /* Adjust line height for better text fit */
               }
               .slider-content {
-                font-size: 0.9rem; /* Smaller font size for smaller screens */
+                font-size: 0.5rem; /* Smaller font size for smaller screens */
                 line-height: 1.4; /* Adjust line height for better text fit */
                 padding: 0 5px; /* Reduced padding to fit text in smaller space */
               }
@@ -52,11 +52,11 @@ sections:
           <style>
             @media (max-width: 768px) {
               .slider-title {
-                font-size: 1.2rem; /* Smaller font size for smaller screens */
+                font-size: 0.5rem; /* Smaller font size for smaller screens */
                 line-height: 1.3; /* Adjust line height for better text fit */
               }
               .slider-content {
-                font-size: 0.9rem; /* Smaller font size for smaller screens */
+                font-size: 0.5rem; /* Smaller font size for smaller screens */
                 line-height: 1.4; /* Adjust line height for better text fit */
                 padding: 0 5px; /* Reduced padding to fit text in smaller space */
               }
@@ -82,11 +82,11 @@ sections:
           <style>
             @media (max-width: 768px) {
               .slider-title {
-                font-size: 1.2rem; /* Smaller font size for smaller screens */
+                font-size: 0.5rem; /* Smaller font size for smaller screens */
                 line-height: 1.3; /* Adjust line height for better text fit */
               }
               .slider-content {
-                font-size: 0.9rem; /* Smaller font size for smaller screens */
+                font-size: 0.5rem; /* Smaller font size for smaller screens */
                 line-height: 1.4; /* Adjust line height for better text fit */
                 padding: 0 5px; /* Reduced padding to fit text in smaller space */
               }
