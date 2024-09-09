@@ -1,6 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
 # Leave the homepage title empty to use the site title
+# Leave the homepage title empty to use the site title
 title:
 date: 2024-08-04
 type: landing
@@ -13,7 +14,7 @@ sections:
     content:
       slides:
       - title: Investigating cellular heterogeneity in human tissue
-        content: # Content can be added here if needed
+        content:
         align: center
         background:
           image:
@@ -25,19 +26,18 @@ sections:
         style: |
           @media (max-width: 768px) {
             .slider-title {
-              font-size: 1.5rem; /* Smaller font size for smaller screens */
-              padding: 10px; /* Add padding to avoid cutting off */
-              text-align: center; /* Center align text */
+              font-size: 1.5rem; /* Adjust font size for smaller screens */
+              line-height: 1.2; /* Ensure line height is adjusted to fit text */
             }
             .slider-content {
-              font-size: 1rem; /* Smaller font size for smaller screens */
-              padding: 10px; /* Add padding to avoid cutting off */
-              text-align: center; /* Center align text */
+              font-size: 1rem; /* Adjust font size for smaller screens */
+              line-height: 1.4; /* Ensure line height is adjusted to fit text */
+              padding: 0 10px; /* Add padding to prevent text from touching the edges */
             }
           }
 
       - title: Developing biophysical tools to study cell function
-        content: # Content can be added here if needed
+        content:
         align: left
         background:
           image:
@@ -49,19 +49,18 @@ sections:
         style: |
           @media (max-width: 768px) {
             .slider-title {
-              font-size: 1.5rem; /* Smaller font size for smaller screens */
-              padding: 10px; /* Add padding to avoid cutting off */
-              text-align: left; /* Align text to the left */
+              font-size: 1.5rem; /* Adjust font size for smaller screens */
+              line-height: 1.2; /* Ensure line height is adjusted to fit text */
             }
             .slider-content {
-              font-size: 1rem; /* Smaller font size for smaller screens */
-              padding: 10px; /* Add padding to avoid cutting off */
-              text-align: left; /* Align text to the left */
+              font-size: 1rem; /* Adjust font size for smaller screens */
+              line-height: 1.4; /* Ensure line height is adjusted to fit text */
+              padding: 0 10px; /* Add padding to prevent text from touching the edges */
             }
           }
 
       - title: Precision medicine tools to improve human health
-        content: # Content can be added here if needed
+        content:
         align: right
         background:
           image:
@@ -78,22 +77,25 @@ sections:
         style: |
           @media (max-width: 768px) {
             .slider-title {
-              font-size: 1.5rem; /* Smaller font size for smaller screens */
-              padding: 10px; /* Add padding to avoid cutting off */
-              text-align: right; /* Align text to the right */
+              font-size: 1.5rem; /* Adjust font size for smaller screens */
+              line-height: 1.2; /* Ensure line height is adjusted to fit text */
             }
             .slider-content {
-              font-size: 1rem; /* Smaller font size for smaller screens */
-              padding: 10px; /* Add padding to avoid cutting off */
-              text-align: right; /* Align text to the right */
+              font-size: 1rem; /* Adjust font size for smaller screens */
+              line-height: 1.4; /* Ensure line height is adjusted to fit text */
+              padding: 0 10px; /* Add padding to prevent text from touching the edges */
             }
           }
 
     design:
-      slide_height: '' # Height can be adjusted as needed
-      is_fullscreen: true # Fullscreen might be good for larger screens
+      # Slide height is automatic unless you force a specific height (e.g. '400px')
+      slide_height: '' 
+      is_fullscreen: true # Whether the slider should be fullscreen
+      # Automatically transition through slides?
       loop: false
+      # Duration of transition between slides (in ms)
       interval: 1500
+
 
 
 
