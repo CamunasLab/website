@@ -271,6 +271,18 @@ sections:
               <td style="border: 1px solid #ddd; padding: 8px;">2023</td>
               <td style="border: 1px solid #ddd; padding: 8px;">PhD student, Cambridge University</td>
             </tr>
+            <tr>
+              <td style="border: 1px solid #ddd; padding: 8px;">Paolo Valentini</td>
+              <td style="border: 1px solid #ddd; padding: 8px;">Research Assistant</td>
+              <td style="border: 1px solid #ddd; padding: 8px;">2022-2024</td>
+              <td style="border: 1px solid #ddd; padding: 8px;"></td>
+            </tr>
+                       <tr>
+              <td style="border: 1px solid #ddd; padding: 8px;">Sina Amirnezhad</td>
+              <td style="border: 1px solid #ddd; padding: 8px;">MsC student</td>
+              <td style="border: 1px solid #ddd; padding: 8px;">2023-2024</td>
+              <td style="border: 1px solid #ddd; padding: 8px;">Analytical Development Research Technician, SmartCella Holding AB</td>
+            </tr>
           </tbody>
         </table>
       </div>
