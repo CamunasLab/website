@@ -293,7 +293,7 @@ sections:
             background-color: #5e337d; /* Change to a darker purple on hover */
           }
         </style>
-        
+
         <script>
           function toggleAlumniSection() {
             const table = document.getElementById('alumni-table');
@@ -304,18 +304,18 @@ sections:
         # Choose how many columns the section has. Valid values: '1' or '2'.
         columns: '1'
 
-  # Alumni Section
-  - block: markdown
-    content:
-      title: ' '
-      subtitle: '**Alumni**'
-      text: |
-        | Name | Position in the lab    | Years | Next Position                 |
-        |--------------------|------------|-------|-------------------------------|
-        | Emma Walsh | Research Assistant | 2023  | PhD student, Cambridge University |
-      design:
-        # Choose how many columns the section has. Valid values: '1' or '2'.
-        columns: '1'
+  # # Alumni Section
+  # - block: markdown
+  #   content:
+  #     title: ' '
+  #     subtitle: '**Alumni**'
+  #     text: |
+  #       | Name | Position in the lab    | Years | Next Position                 |
+  #       |--------------------|------------|-------|-------------------------------|
+  #       | Emma Walsh | Research Assistant | 2023  | PhD student, Cambridge University |
+  #     design:
+  #       # Choose how many columns the section has. Valid values: '1' or '2'.
+  #       columns: '1'
 
   # Publications and Resources Section
   - block: markdown
