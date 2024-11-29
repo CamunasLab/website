@@ -240,11 +240,11 @@ sections:
       title: ' '
       subtitle: ''
       text: |
-        <div>
+        <div style="text-align: center;">
           <button onclick="toggleAlumniSection()" 
                   style="
                     display: inline-block; 
-                    background-color: #4A90E2; 
+                    background-color: #7d4ba9; 
                     color: white; 
                     padding: 10px 15px; 
                     border: none; 
