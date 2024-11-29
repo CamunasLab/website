@@ -10,7 +10,7 @@ order_pos: 8
 
 # Username (this should match the folder name)
 authors:
-  - researchers
+ # - researchers
 
 # Is this the primary user of the site?
 superuser: false
@@ -63,8 +63,8 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Research Assistants
-  - Members
+  # - Research Assistants
+  # - Members
 ---
 
 Paolo Valentini is a research assistant in the lab since 2022.

@@ -9,7 +9,7 @@ order_pos: 8
 
 # Username (this should match the folder name)
 authors:
-  - researchers
+  #- researchers
 
 # Is this the primary user of the site?
 superuser: true
@@ -60,8 +60,8 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - MsC Student
-  - Members
+  # - MsC Student
+  # - Members
 ---
 
 Sina Aminerzhad is a MsC student in the lab since 2024.

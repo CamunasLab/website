@@ -1,11 +1,11 @@
 ---
 # Display name
-title: David Sandberg
+title: Roberta Ferrara
 
 # Full Name (for SEO)
-first_name: David
-last_name: Sandberg
-order_pos: 7
+first_name: Roberta
+last_name: Ferrara
+order_pos: 8
 
 
 # Username (this should match the folder name)
@@ -16,7 +16,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Research Assistant
+role: MsC student
 
 # Organizations/Affiliations
 organizations:
@@ -31,12 +31,12 @@ interests:
 
 education:
   courses:
-    - course: MsC in Biotechnology
-      institution: Chalmers University
-      year:
-    - course: BsC in Chemistry
-      institution: University of Gothenburg
-      year:
+    # - course: MsC in Biotechnology
+    #   institution: Chalmers University
+    #   year:
+    # - course: BsC in Chemistry
+    #   institution: University of Gothenburg
+    #   year:
 
 
 # Social/Academic Networking
@@ -46,7 +46,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:david.sandberg@gu.se'
+   # link: 'mailto:david.sandberg@gu.se'
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -63,8 +63,8 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Research Assistants
+  - MsC Student
   - Members
 ---
 
-David Sandberg is a research assistant in the lab since 2024.
+Roberta Ferrara is a MsC student in the lab since 2024.
