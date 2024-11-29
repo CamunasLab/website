@@ -31,12 +31,12 @@ interests:
 
 education:
   courses:
-    # - course: MsC in Biotechnology
-    #   institution: Chalmers University
-    #   year:
-    # - course: BsC in Chemistry
-    #   institution: University of Gothenburg
-    #   year:
+    - course: MsC in Molecular Medicine
+      institution: Uppsala University
+      year: 2023-2025
+    - course: BsC in Genomics
+      institution: University of Bologna
+      year: 2019-2022
 
 
 # Social/Academic Networking
@@ -46,7 +46,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-   # link: 'mailto:david.sandberg@gu.se'
+    link: 'mailto:roberta.ferrara.7484@student.uu.se'
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
