@@ -249,7 +249,8 @@ sections:
                     padding: 10px 15px; 
                     border: none; 
                     cursor: pointer; 
-                    border-radius: 5px;">
+                    border-radius: 5px;
+                    font-size: 25px;">
             Alumni
           </button>
           <div id="alumni-table" style="display: none; margin-top: 10px;">
