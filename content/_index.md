@@ -238,7 +238,7 @@ sections:
     id: alumni-section
     content:
       title: ' '
-      subtitle: '**Alumni**'
+      subtitle: ''
       text: |
         <div>
           <button onclick="toggleAlumniSection()" 
@@ -250,7 +250,7 @@ sections:
                     border: none; 
                     cursor: pointer; 
                     border-radius: 5px;">
-            Toggle Alumni
+            Alumni
           </button>
           <div id="alumni-table" style="display: none; margin-top: 10px;">
             <table style="width: 100%; border-collapse: collapse;">
@@ -279,7 +279,6 @@ sections:
             table.style.display = table.style.display === 'none' ? 'block' : 'none';
           }
         </script>
-        #     design:
       design:
         # Choose how many columns the section has. Valid values: '1' or '2'.
         columns: '1'
