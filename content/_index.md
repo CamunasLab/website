@@ -232,19 +232,70 @@ sections:
       show_interests: false # Whether to show interests of team members
       show_role: true # Whether to show roles of team members
       show_social: true # Whether to show social links of team members
-
-  # Alumni Section
+  
+    # Alumni Section
   - block: markdown
+    id: alumni-section
     content:
       title: ' '
       subtitle: '**Alumni**'
       text: |
-        | Name | Position in the lab    | Years | Next Position                 |
-        |--------------------|------------|-------|-------------------------------|
-        | Emma Walsh | Research Assistant | 2023  | PhD student, Cambridge University |
+        <div>
+          <button onclick="toggleAlumniSection()" 
+                  style="
+                    display: inline-block; 
+                    background-color: #4A90E2; 
+                    color: white; 
+                    padding: 10px 15px; 
+                    border: none; 
+                    cursor: pointer; 
+                    border-radius: 5px;">
+            Toggle Alumni
+          </button>
+          <div id="alumni-table" style="display: none; margin-top: 10px;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Name</th>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Position in the Lab</th>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Years</th>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Next Position</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Emma Walsh</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Research Assistant</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">2023</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">PhD student, Cambridge University</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <script>
+          function toggleAlumniSection() {
+            const table = document.getElementById('alumni-table');
+            table.style.display = table.style.display === 'none' ? 'block' : 'none';
+          }
+        </script>
+        #     design:
       design:
         # Choose how many columns the section has. Valid values: '1' or '2'.
         columns: '1'
+
+  # # Alumni Section
+  # - block: markdown
+  #   content:
+  #     title: ' '
+  #     subtitle: '**Alumni**'
+  #     text: |
+  #       | Name | Position in the lab    | Years | Next Position                 |
+  #       |--------------------|------------|-------|-------------------------------|
+  #       | Emma Walsh | Research Assistant | 2023  | PhD student, Cambridge University |
+  #     design:
+  #       # Choose how many columns the section has. Valid values: '1' or '2'.
+  #       columns: '1'
 
   # Publications and Resources Section
   - block: markdown
