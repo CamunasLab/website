@@ -234,8 +234,6 @@ sections:
       show_social: true # Whether to show social links of team members
   
     # Alumni Section
-
-  
   - block: markdown
     id: alumni-section
     content:
