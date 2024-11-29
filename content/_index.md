@@ -240,127 +240,82 @@ sections:
       title: ' '
       subtitle: ''
       text: |
-    <div style="text-align: center;">
-      <button onclick="toggleAlumniSection()" 
-              style="
-                display: inline-block; 
-                background-color: #7d4ba9; 
-                color: white; 
-                padding: 20px 40px; /* Larger padding for a bigger button */
-                border: none; 
-                cursor: pointer; 
-                border-radius: 10px; /* More rounded corners */
-                font-size: 30px; /* Larger font size */
-                transition: background-color 0.3s ease;"> <!-- Smooth hover transition -->
-        Alumni
-      </button>
-      <div id="alumni-table" style="display: none; margin-top: 10px;">
-        <table style="width: 100%; border-collapse: collapse;">
-          <thead>
-            <tr>
-              <th style="border: 1px solid #ddd; padding: 8px;">Name</th>
-              <th style="border: 1px solid #ddd; padding: 8px;">Position in the Lab</th>
-              <th style="border: 1px solid #ddd; padding: 8px;">Years</th>
-              <th style="border: 1px solid #ddd; padding: 8px;">Next Position</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">Emma Walsh</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Research Assistant</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">2023</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">PhD student, Cambridge University</td>
-            </tr>
-            <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">Paolo Valentini</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Research Assistant</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">2022-2024</td>
-              <td style="border: 1px solid #ddd; padding: 8px;"></td>
-            </tr>
-                       <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">Sina Amirnezhad</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">MsC student</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">2023-2024</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Analytical Development Research Technician, SmartCella Holding AB</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+        <div style="text-align: center;">
+          <button onclick="toggleAlumniSection()" 
+                  style="
+                    display: inline-block; 
+                    background-color: #7d4ba9; 
+                    color: white; 
+                    padding: 20px 40px; /* Larger padding for a bigger button */
+                    border: none; 
+                    cursor: pointer; 
+                    border-radius: 10px; /* More rounded corners */
+                    font-size: 30px; /* Larger font size */
+                    transition: background-color 0.3s ease;"> <!-- Smooth hover transition -->
+            Alumni
+          </button>
+          <div id="alumni-table" style="display: none; margin-top: 10px;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Name</th>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Position in the Lab</th>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Years</th>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Next Position</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Emma Walsh</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Research Assistant</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">2023</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">PhD student, Cambridge University</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Paolo Valentini</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Research Assistant</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">2022-2024</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;"></td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Sina Amirnezhad</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">MsC student</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">2023-2024</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Analytical Development Research Technician, SmartCella Holding AB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-    <style>
-      button:hover {
-        background-color: #5e337d; /* Change to a darker purple on hover */
-      }
-    </style>
-
-    <script>
-      function toggleAlumniSection() {
-        const table = document.getElementById('alumni-table');
-        table.style.display = table.style.display === 'none' ? 'block' : 'none';
-      }
-      </script>
-  design:
+        <style>
+          button:hover {
+            background-color: #5e337d; /* Change to a darker purple on hover */
+          }
+        </style>
+        
+        <script>
+          function toggleAlumniSection() {
+            const table = document.getElementById('alumni-table');
+            table.style.display = table.style.display === 'none' ? 'block' : 'none';
+          }
+        </script>
+      design:
         # Choose how many columns the section has. Valid values: '1' or '2'.
         columns: '1'
 
-  
-  #       <div style="text-align: center;">
-  #         <button onclick="toggleAlumniSection()" 
-  #                 style="
-  #                   display: inline-block; 
-  #                   background-color: #7d4ba9; 
-  #                   color: white; 
-  #                   padding: 10px 15px; 
-  #                   border: none; 
-  #                   cursor: pointer; 
-  #                   border-radius: 5px;
-  #                   font-size: 25px;">
-  #           Alumni
-  #         </button>
-  #         <div id="alumni-table" style="display: none; margin-top: 10px;">
-  #           <table style="width: 100%; border-collapse: collapse;">
-  #             <thead>
-  #               <tr>
-  #                 <th style="border: 1px solid #ddd; padding: 8px;">Name</th>
-  #                 <th style="border: 1px solid #ddd; padding: 8px;">Position in the Lab</th>
-  #                 <th style="border: 1px solid #ddd; padding: 8px;">Years</th>
-  #                 <th style="border: 1px solid #ddd; padding: 8px;">Next Position</th>
-  #               </tr>
-  #             </thead>
-  #             <tbody>
-  #               <tr>
-  #                 <td style="border: 1px solid #ddd; padding: 8px;">Emma Walsh</td>
-  #                 <td style="border: 1px solid #ddd; padding: 8px;">Research Assistant</td>
-  #                 <td style="border: 1px solid #ddd; padding: 8px;">2023</td>
-  #                 <td style="border: 1px solid #ddd; padding: 8px;">PhD student, Cambridge University</td>
-  #               </tr>
-  #             </tbody>
-  #           </table>
-  #         </div>
-  #       </div>
-  #       <script>
-  #         function toggleAlumniSection() {
-  #           const table = document.getElementById('alumni-table');
-  #           table.style.display = table.style.display === 'none' ? 'block' : 'none';
-  #         }
-  #       </script>
-  #     design:
-  #       # Choose how many columns the section has. Valid values: '1' or '2'.
-  #       columns: '1'
-
-  # # Alumni Section
-  # - block: markdown
-  #   content:
-  #     title: ' '
-  #     subtitle: '**Alumni**'
-  #     text: |
-  #       | Name | Position in the lab    | Years | Next Position                 |
-  #       |--------------------|------------|-------|-------------------------------|
-  #       | Emma Walsh | Research Assistant | 2023  | PhD student, Cambridge University |
-  #     design:
-  #       # Choose how many columns the section has. Valid values: '1' or '2'.
-  #       columns: '1'
+  # Alumni Section
+  - block: markdown
+    content:
+      title: ' '
+      subtitle: '**Alumni**'
+      text: |
+        | Name | Position in the lab    | Years | Next Position                 |
+        |--------------------|------------|-------|-------------------------------|
+        | Emma Walsh | Research Assistant | 2023  | PhD student, Cambridge University |
+      design:
+        # Choose how many columns the section has. Valid values: '1' or '2'.
+        columns: '1'
 
   # Publications and Resources Section
   - block: markdown
