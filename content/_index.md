@@ -275,7 +275,7 @@ sections:
                   <td style="border: 1px solid #ddd; padding: 8px;">Paolo Valentini</td>
                   <td style="border: 1px solid #ddd; padding: 8px;">Research Assistant</td>
                   <td style="border: 1px solid #ddd; padding: 8px;">2022-2024</td>
-                  <td style="border: 1px solid #ddd; padding: 8px;">Research Assistant, AstraZeneca</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Research Technician, Avantor</td>
                 </tr>
                 <tr>
                   <td style="border: 1px solid #ddd; padding: 8px;">Sina Amirnezhad</td>
