@@ -283,6 +283,12 @@ sections:
                   <td style="border: 1px solid #ddd; padding: 8px;">2023-2024</td>
                   <td style="border: 1px solid #ddd; padding: 8px;">Research Technician, SmartCella Holding AB</td>
                 </tr>
+                  <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">David Sandberg</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Research Assistant</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">2024</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">phD student, Chalmers University of Technology</td>
+                </tr>
               </tbody>
             </table>
           </div>

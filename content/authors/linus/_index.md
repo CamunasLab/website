@@ -1,10 +1,10 @@
 ---
 # Display name
-title: David Sandberg
+title: Ludvig Andersson
 
 # Full Name (for SEO)
-first_name: David
-last_name: Sandberg
+first_name: Ludvig
+last_name: Andersson
 order_pos: 7
 
 
@@ -16,7 +16,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Research Assistant
+role: BSc student
 
 # Organizations/Affiliations
 organizations:
@@ -31,12 +31,10 @@ interests:
 
 education:
   courses:
-    - course: MsC in Biotechnology
-      institution: Chalmers University
-      year:
-    - course: BsC in Chemistry
+    - course: BsC in Molecular Biology
       institution: University of Gothenburg
       year:
+
 
 
 # Social/Academic Networking
@@ -46,7 +44,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:david.sandberg@gu.se'
+    link: 'mailto:gusandlux@student.gu.se'
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -63,8 +61,8 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  # - Research Assistants
-  # - Members
+  - BSc students
+  - Members
 ---
 
 David Sandberg is a research assistant in the lab since 2024.
