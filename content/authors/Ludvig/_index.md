@@ -65,4 +65,4 @@ user_groups:
   - Members
 ---
 
-David Sandberg is a research assistant in the lab since 2024.
+Ludvig Andersson is a Bsc student in the lab since 2025.
