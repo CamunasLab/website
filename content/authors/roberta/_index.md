@@ -5,7 +5,7 @@ title: Roberta Ferrara
 # Full Name (for SEO)
 first_name: Roberta
 last_name: Ferrara
-order_pos: 8
+order_pos: 7
 
 
 # Username (this should match the folder name)
@@ -16,7 +16,7 @@ authors:
 superuser: false
 
 # Role/position
-role: MSc student
+role: PhD Student
 
 # Organizations/Affiliations
 organizations:
@@ -24,7 +24,7 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include xxx.
+bio: MSc student in Joan Camunas group since Nov 2024.
 
 interests:
 
@@ -63,8 +63,8 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - MsC Student
+  - PhD Students
   - Members
 ---
 
-Roberta Ferrara is a MsC student in the lab since 2024.
+Roberta Ferrara is a PhD student in the lab since 2025.

@@ -5,7 +5,7 @@ title: Ludvig Andersson
 # Full Name (for SEO)
 first_name: Ludvig
 last_name: Andersson
-order_pos: 7
+#order_pos: 7
 
 
 # Username (this should match the folder name)
@@ -61,8 +61,8 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - BSc students
-  - Members
+ # - BSc students
+ # - Members
 ---
 
 Ludvig Andersson is a Bsc student in the lab since 2025.

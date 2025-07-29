@@ -289,6 +289,11 @@ sections:
                   <td style="border: 1px solid #ddd; padding: 8px;">2024</td>
                   <td style="border: 1px solid #ddd; padding: 8px;">phD student, Chalmers University of Technology</td>
                 </tr>
+                   <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Ludvig Andersson</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">BsC Student</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">2025</td>
+                </tr>
               </tbody>
             </table>
           </div>
