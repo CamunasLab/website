@@ -6,7 +6,7 @@
 # Appearance
 appearance:
   theme_day: minimal
-  theme_night: dark-mode # Define your dark mode theme
+  theme_night: nord # Define your dark mode theme
   font: native
   font_size: L
 
@@ -20,7 +20,7 @@ marketing:
     description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
     twitter: 'GetResearchDev'
   analytics:
-    google_analytics: ''
+    google_analytics: ""
     baidu_tongji: ''
     google_tag_manager: ''
     microsoft_clarity: ''
