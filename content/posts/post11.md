@@ -6,5 +6,3 @@ tags:
 featureimage: "images/IMG_1956.jpg"
 type: post
 ---
-
-![poster](images/IMG_1951.jpg)
