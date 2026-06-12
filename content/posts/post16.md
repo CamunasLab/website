@@ -1,6 +1,6 @@
 ---
 title: "New Study Accepted in PLOS Pathogens"
-date: 2026
+date: 2026-03-18
 tags:
   - event
   - publication
