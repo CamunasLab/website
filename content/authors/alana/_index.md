@@ -1,11 +1,11 @@
 ---
 # Display name
-title: Oliver Forsell
+title: Alana Mullins
 
 # Full Name (for SEO)
-first_name: Oliver
-last_name: Forsell
-order_pos: 8
+first_name: Alana
+last_name: Mullins
+order_pos: 5
 
 # Username (this should match the folder name)
 authors:
@@ -15,7 +15,7 @@ authors:
 superuser: false
 
 # Role/position
-role: PhD Student
+role: Postdoctoral Researcher
 
 # Organizations/Affiliations
 organizations:
@@ -30,12 +30,9 @@ interests:
 
 education:
   courses:
-    - course: MsC in Biotechnology
-      institution: Chalmers University
-      year:
-    - course: BsC in Biotechnology
-      institution: Chalmers University
-      year:
+    - course: PhD 
+      institution: Newcastle University
+
 
 
 # Social/Academic Networking
@@ -45,7 +42,11 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:oliver.forsell@gu.se'
+
+
+# Social/Ac
+    link: 'mailto: alana.mullins@gu.se'
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -61,8 +62,8 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - PhD Students
+  - Postdoctoral Researchers
   - Members
 ---
 
-Oliver Forsell is a PhD student in the lab since 2023.
+Sandra Postic is a Postdoctoral Scholar in the lab since 2023.

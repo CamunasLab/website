@@ -5,7 +5,7 @@ title: Mercedes Dalman
 # Full Name (for SEO)
 first_name: Mercedes
 last_name: Dalman
-order_pos: 5
+order_pos: 6
 
 # Username (this should match the folder name)
 authors:
