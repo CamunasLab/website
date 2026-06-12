@@ -1,11 +1,11 @@
 ---
 # Display name
-title: Alana Mullins
+title: Ahmad Kobiita
 
 # Full Name (for SEO)
-first_name: Alana
-last_name: Mullins
-order_pos: 5
+first_name: Ahmad
+last_name: Kobiita
+order_pos: 6
 
 # Username (this should match the folder name)
 authors:
@@ -30,8 +30,6 @@ interests:
 
 education:
   courses:
-    - course: PhD 
-      institution: Newcastle University
 
 
 
@@ -66,4 +64,4 @@ user_groups:
   - Members
 ---
 
-Alana Mullins is a Postdoctoral Scholar in the lab since 2025.
+Ahmad Kobiita is a Postdoctoral Scholar in the lab since 2026.

@@ -1,21 +1,22 @@
 ---
 # Display name
-title: Alana Mullins
+title: Kajsa Hallin
 
 # Full Name (for SEO)
-first_name: Alana
-last_name: Mullins
-order_pos: 5
+first_name: Kajsa
+last_name: Hallin
+order_pos: 10
+
 
 # Username (this should match the folder name)
 authors:
-  - researchers
+ - researchers
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Postdoctoral Researcher
+role: Research Assistant
 
 # Organizations/Affiliations
 organizations:
@@ -30,8 +31,6 @@ interests:
 
 education:
   courses:
-    - course: PhD 
-      institution: Newcastle University
 
 
 
@@ -42,10 +41,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-
-
-# Social/Ac
-    link: 'mailto: alana.mullins@gu.se'
+    link: 'mailto:kajsa.hallin@gu.se'
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -62,8 +58,8 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Postdoctoral Researchers
-  - Members
+  # - Research Assistants
+  # - Members
 ---
 
-Alana Mullins is a Postdoctoral Scholar in the lab since 2025.
+Paolo Valentini is a research assistant in the lab since 2025.
