@@ -4,7 +4,7 @@ date: 2026
 tags:
   - event
   - publication
-featureimage: "images/Striking_image.jpg"
+featureimage: "images/Striking_image.png"
 type: post
 ---
 We are excited to announce that our study, "Cell-free RNA reveals host and microbial correlates of broadly neutralizing antibody development against HIV", has been accepted for publication in PLOS Pathogens.
