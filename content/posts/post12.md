@@ -1,6 +1,6 @@
 ---
 title: "Joan Camunas Receives European Diabetes Research Award"
-date: 2025
+date: 2025-09-24
 tags:
   - award
   - event
