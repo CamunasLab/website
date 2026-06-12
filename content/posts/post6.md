@@ -2,7 +2,7 @@
 title: "🎤 Two talks in the DPG|APS|LS2 General Meeting in Vienna! 🇦🇹"
 date: 2024-09-22
 tags:
-  - experiment
+  - talk
   - event
 featureimage: "images/im_vienna_dpg.jpg"
 type: post

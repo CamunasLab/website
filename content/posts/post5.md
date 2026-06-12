@@ -2,7 +2,7 @@
 title: "Invited talk by Prof. K Peterson (UKMC)"
 date: 2024-08-24
 tags:
-  - experiment
+  - talk
   - event
 featureimage: "images/im_kpeterson.jpg"
 type: post

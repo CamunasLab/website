@@ -2,7 +2,7 @@
 title: "Interview Akademiliv"
 date: 2024-08-06
 tags:
-  - experiment
+  - talk
   - event
 featureimage: "images/im_interview_2022b.jpg"
 type: post
