@@ -1,6 +1,6 @@
 ---
 title: "Welcome Alana!"
-date: 2025-11
+date: 2025-11-01
 tags:
   - event
 featureimage: "images/avatar.jpg"
